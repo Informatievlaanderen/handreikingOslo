@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:scalar="http://scalar.usc.edu/2012/01/scalar-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:ov="http://open.vocab.org/terms/"
+  xmlns:sioc="http://rdfs.org/sioc/ns#">
+
+  <rdf:Description rdf:about="http://scalar.usc.edu/works/guide/index">
+    <rdf:type rdf:resource="http://scalar.usc.edu/2012/01/scalar-ns#Composite"/>
+    <scalar:isLive>1</scalar:isLive>
+    <foaf:homepage rdf:resource="http://scalar.usc.edu/works/guide/users/379"/>
+    <dcterms:created>2013-03-26T09:32:14-07:00</dcterms:created>
+    <scalar:urn rdf:resource="urn:scalar:content:12662"/>
+    <scalar:version rdf:resource="http://scalar.usc.edu/works/guide/index.23"/>
+    <dcterms:hasVersion rdf:resource="http://scalar.usc.edu/works/guide/index.23"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://scalar.usc.edu/works/guide/index.23">
+    <ov:versionnumber>23</ov:versionnumber>
+    <dcterms:title>Welcome</dcterms:title>
+    <dcterms:description>Introduction to the User's Guide</dcterms:description>
+    <sioc:content>&lt;p&gt;Scalar is a free, open source publishing platform that’s designed to make it easy for authors to write long-form, born-digital scholarship online.&amp;nbsp;Scalar&amp;nbsp;enables users to assemble media from multiple sources and juxtapose them with their own writing in a variety of ways, with minimal technical expertise required. Scalar also gives authors tools to structure essay- and book-length works in ways that take advantage of the unique capabilities of digital writing, including nested, recursive, and non-linear formats. The platform also supports collaborative authoring and reader commentary.&lt;/p&gt;&lt;p&gt;This user's guide includes introductions to Scalar's features as well as more in-depth material to explore as your get to know the tools. If you're familiar with blogging platforms like WordPress you'll find yourself at home with many of Scalar's editing features, though you can also do things with Scalar that would be next to impossible in a typical blog.&lt;/p&gt;&lt;p&gt;If this is your first time using Scalar, head down the&amp;nbsp;&lt;a href=&quot;getting-started&quot; rel=&quot;urn:scalar:version:36820&quot;&gt;Getting Started&lt;/a&gt;&amp;nbsp;path to acquaint yourself with the basics. If you're in a hurry, you can explore a special path that gathers all of Scalar's&amp;nbsp;&lt;a href=&quot;quickstarts&quot; rel=&quot;urn:scalar:version:37127&quot;&gt;QuickStart&lt;/a&gt;&amp;nbsp;documentation in one place. If you're embarking on a large project, we highly recommend you read through the sections on&amp;nbsp;&lt;a href=&quot;working-with-media&quot; rel=&quot;urn:scalar:version:36835&quot;&gt;Working with Media&lt;/a&gt;,&amp;nbsp;&lt;a href=&quot;working-with-content&quot; rel=&quot;urn:scalar:version:36909&quot;&gt;Working with Content&lt;/a&gt;, and&amp;nbsp;&lt;a href=&quot;working-with-structure&quot; rel=&quot;urn:scalar:version:36917&quot;&gt;Working with Structure&lt;/a&gt;&amp;nbsp;to familiarize yourself with all of Scalar's capabilities as well as some important considerations for using media in your book. The&amp;nbsp;&lt;a href=&quot;advanced-topics&quot; rel=&quot;urn:scalar:version:36940&quot;&gt;Advanced Topics&lt;/a&gt;&amp;nbsp;section dives into some useful features for those who want to dive a bit deeper into the platform. Finally, the &lt;a href=&quot;http://scalar.usc.edu/works/guide/custom-styling&quot;&gt;Custom Styling&lt;/a&gt; section shows you how to tailor basic stylistic features of Scalar projects, like font size and background color. &lt;/p&gt;&lt;p&gt;Welcome to Scalar!&lt;/p&gt;</sioc:content>
+    <scalar:defaultView>plain</scalar:defaultView>
+    <foaf:homepage rdf:resource="http://scalar.usc.edu/works/guide/users/913"/>
+    <dcterms:created>2014-08-05T09:55:11-07:00</dcterms:created>
+    <scalar:urn rdf:resource="urn:scalar:version:210521"/>
+    <dcterms:isVersionOf rdf:resource="http://scalar.usc.edu/works/guide/index"/>
+    <rdf:type rdf:resource="http://scalar.usc.edu/2012/01/scalar-ns#Version"/>
+  </rdf:Description>
+
+</rdf:RDF>
