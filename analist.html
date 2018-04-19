@@ -62,7 +62,9 @@
           <div class="grid">
             <div class="col--8-12 col--12-12--s col--8-12--m">
               <div class="content typography introduction" id="intro">
-                <p>Wanneer een project wordt opgestart, wordt er meestal een projectdefinitie, projectinitiatiedocument en/of business case opgesteld. Het is hierbij belangrijk dat de alignering met datastandaarden zoals OSLO van in het begin mee opgenomen is. Dit zien we op verschillende niveaus die op deze pagina behandeld worden.</p>
+                <p>Analisten zien we als medewerkers die instaan voor de vertaling van business vereisten naar toepassingen en applicaties. Op die manier staan ze veelal in contact met inhoudelijke domeinexperten en ontwikkelaars.
+                We bekijken twee cases waarbij we de rol en taken van de analist aan bod laten komen. Case 1 beschrijft de situatie waarin een nieuwe applicatie ontwikkeld wordt. Case 2 betreft de opdracht waarbij gegevensuitwisseling mogelijk gemaakt moet worden met een bestaande applicatie.
+                </p>
               </div>
             </div>
             <!-- <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m">
@@ -104,15 +106,15 @@
                   <ul class="grid grid--is-stacked js-equal-height-container">
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
                       <a class="doormat js-equal-height" href="#subcategorie">
-                        <h2 class="doormat__title" data-clamp="2">CASE 1: eerste case</h2>
-                        <div class="doormat__text" data-clamp="3">Een beetje extra uitleg.
+                        <h2 class="doormat__title" data-clamp="2">Case 1: Nieuwe applicatie</h2>
+                        <div class="doormat__text" data-clamp="3">Ontwikkelen van een nieuwe applicatie.
                         </div>
                       </a>
                     </li>
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
                       <a class="doormat  js-equal-height" href="#subcategorie2">
-                        <h2 class="doormat__title" data-clamp="2">CASE 2: tweede case</h2>
-                        <div class="doormat__text">Hier ook een beetje extra uitleg.
+                        <h2 class="doormat__title" data-clamp="2">Case 2: Bestaande applicatie</h2>
+                        <div class="doormat__text">gegevensuitwisseling mogelijk maken met een bestaande applicatie.
                         </div>
                       </a>
                     </li>
@@ -124,46 +126,81 @@
 
               <div class="u-spacer--large">
                 <div class="u-spacer">
-                <h2 class="h2 u-named-anchor" id="subcategorie">CASE 1: eerste case</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros.</p>
+                <h2 class="h2 u-named-anchor" id="subcategorie">Case 1: Nieuwe applicatie</h2>
+                <p>Om een nieuwe applicatie te ontwikkelen waarbij de verwerkte informatie in lijn ligt met OSLO², kunnen volgende stappen gevolgd worden.</p>
                 </div>
 
                 <div class="u-spacer">
-                <h3 class="h3 u-named-anchor" id="subcategorie-sub1">Stap 1</h3>
+                <h3 class="h3 u-named-anchor" id="subcategorie-sub1">Stap 1: Domeinmodel afstemmen met OSLO²</h3>
+                <h4 class="h4 u-named-anchor" id="subcategorie-sub1">Stap 1.1: Ontwikkel een eerste domeinmodel</h4>
                 <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
+                <p>Identificeer de OSLO² objecten waarmee de te ontwikkelen applicatie in aanraking komt. Hiervoor is een eerste domeinmodel voor de applicatie nodig, op basis van functionele behoeften en concrete use cases en met een focus op de top-level objecten en relaties. Van zodra deze geïdentificeerd zijn, kan per object een traject opgestart worden waarbij de OSLO² termen en definities vergeleken worden met de informatienoden.</p>
 
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
+                <p><a href="http://data.vlaanderen.be/ns/" target="_blank">> Een overzicht van de OSLO² objecten kan hier gevonden worden.</a></p>
+                <br>
+                </div>
+
+                <h4 class="h4 u-named-anchor" id="subcategorie-sub1">Stap 1.2: Maak je vertrouwd met de elementen in OSLO²</h4>
+                <div class="typograpy clearfix">
+                <p>De vocabularia en in het bijzonder de applicatieprofielen geven een overzicht van de verschillende klassen en eigenschappen, hun definities en hoe deze te gebruiken zijn aan de hand van voorbeelden.</p>
+
+                <p><a href="http://data.vlaanderen.be/ns/" target="_blank">> Een overzicht van de vocabularia en applicatieprofielen kan hier gevonden worden.</a></p>
+                <br>
+                </div>
+
+                <h4 class="h4 u-named-anchor" id="subcategorie-sub1">Stap 1.3: Overlap en verschillen tussen OSLO² en domeinmodel bepalen en wegwerken</h4>
+                <div class="typograpy clearfix">
+                <p>Bekijk hoe het domeinmodel van de te ontwikkelen applicatie zich verhoudt tot het OSLO² semantisch model.</p>
+                <p>Om hierbij te helpen kan gebruik gemaakt worden van het <a href="https://www.w3.org/TR/skos-primer/" target="_blank">Simple Knowledge Organisation System (SKOS)</a>. SKOS biedt een set van relaties aan om de graad waarin twee termen semantisch equivalent zijn aan te duiden:</p>
+                <br>
+                <ul class="bullet-list bullet-list--check">
+                  <li class="bullet-list__item"><strong>Close match</strong>: twee termen zijn voldoende gelijkwaardig opdat ze uitwisselbaar zijn. Een close match is echter niet transitief.</li>
+                  <li class="bullet-list__item"><strong>Exact match</strong>: twee termijn zijn nog meer gelijkwaardig dan bij close match en er bestaat een transitief verband.</li>
+                  <li class="bullet-list__item"><strong>Related match</strong>: de termen zijn gerelateerd maar er is geen hiërarchisch verband.</li>
+                  <li class="bullet-list__item"><strong>Broad match</strong>: twee termen zijn gerelateerd maar de ene term is meer generiek dan de andere. Bv. zoogdieren skos:broader dieren. “Broader” dient in feite gelezen te worden als “heeft breder concept”.</li>
+                  <li class="bullet-list__item"><strong>Narrow match</strong>: inverse van ‘broad match’, bv. dieren skos:narrower zoogdieren.</li>
+                <ul>
+                <br>
+                <div class="lightbox js-lightbox gallery">
+                    <a data-lightbox-item class="gallery__item" href="img/skosmappings.png" data-size="810x346" itemprop="contentUrl">
+                      <figure>
+                          <img itemprop="thumbnail" src="img/skosmappings.png" srcset="img/skosmappings.png 1x, img/skosmappings.png 2x" alt="" />
+                          <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Illustratie van de SKOS mapping relaties</figcaption>
+                      </figure>
+                    </a>
+                </div>
+                <br>
+                <p>Daarnaast is het mogelijk dat er geen overeenkomstige term bestaat in OSLO². In dit geval is het mogelijk om het OSLO² semantisch model uit te breiden door middel van een extensie (zie de volgende stap). De resulterende mapping tabel wordt besproken in de werkgroep.</p>
+                <br>
+                </div>
+
+                <h4 class="h4 u-named-anchor" id="subcategorie-sub1">Stap 1.4: Zoek een oplossing voor niet-gemapte termen</h4>
+                <div class="typograpy clearfix">
+                <p>Aan te vullen.</p>
                 </div>
                 </div>
 
                 <h3 class="h3 u-named-anchor" id="subcategorie-sub2">Stap 2</h3>
                 <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
-
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
+                <p>Aan te vullen.</p>
                 </div>
               </div>
               <div class="u-spacer--large">
                 <div class="u-spacer">
-                <h2 class="h2 u-named-anchor" id="subcategorie2">CASE 2: tweede case</h2>
+                <h2 class="h2 u-named-anchor" id="subcategorie2">Case 2: Bestaande applicatie</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros.</p>
                 </div>
 
                 <div class="u-spacer">
                 <h3 class="h3 u-named-anchor" id="subcategorie2-sub1">Stap 1</h3>
                 <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
-
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
+                <p>Aan te vullen.</p>
                 </div>
                 </div>
 
                 <h3 class="h3 u-named-anchor" id="subcategorie2-sub2">Stap 2</h3>
                 <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
-
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
+                <p>Aan te vullen.</p>
                 </div>
               </div>
             </div>
@@ -174,7 +211,7 @@
                   <div class="side-navigation__group">
                     <ul>
                       <li class="side-navigation__item">
-                        <a class="side-navigation__toggle" href="#subcategorie" data-child="parent-1">CASE 1: eerste case</a>
+                        <a class="side-navigation__toggle" href="#subcategorie" data-child="parent-1">Case 1: Nieuwe applicatie</a>
                         <ul>
                           <li class="side-navigation__item">
                             <a href="#subcategorie-sub1" data-parent="parent-1">Stap 1</a>
@@ -185,7 +222,7 @@
                         </ul>
                       </li>
                       <li class="side-navigation__item">
-                        <a class="side-navigation__toggle" href="#subcategorie2" data-child="parent-2">CASE 2: tweede case</a>
+                        <a class="side-navigation__toggle" href="#subcategorie2" data-child="parent-2">Case 2: Bestaande applicatie</a>
                         <ul>
                           <li class="side-navigation__item">
                             <a href="#subcategorie2-sub1" data-parent="parent-2">Stap 1</a>
