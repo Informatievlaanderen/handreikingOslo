@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "skos":    "http://www.w3.org/2004/02/skos/core#",
+    "rdfs":    "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://data.vlaanderen.be/doc/concept/notificatietype",
+      "@type": "skos:ConceptScheme",
+      "rdfs:label": {
+        "@language": "nl",
+        "@value": "Type Notificatie"
+      },
+      "skos:hasTopConcept": [
+          "http://data.vlaanderen.be/id/concept/notificatietype/InformatiefBericht",
+          "http://data.vlaanderen.be/id/concept/notificatietype/DossiergerelateerdBericht",
+          "http://data.vlaanderen.be/id/concept/notificatietype/ProbleemMelden"
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/doc/concept/notificatietype/InformatiefBericht",
+      "@type": "skos:Concept",
+      "skos:definition": {
+        "@language": "nl",
+        "@value": "Een louter informatieve notificatie"
+      },
+      "skos:inScheme": "http://data.vlaanderen.be/doc/concept/notificatietype",
+      "skos:notation": "InformatiefBericht",
+      "skos:prefLabel": {
+        "@language": "nl",
+        "@value": "Informatief Bericht"
+      },
+      "narrower": [
+        "http://data.vlaanderen.be/id/concept/notificatietype/Wetswijziging",
+        "http://data.vlaanderen.be/id/concept/notificatietype/NieuweSubsidiemaatregel",
+        "http://data.vlaanderen.be/id/concept/notificatietype/AlgemeenNieuwsbericht"
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/id/concept/notificatietype/Wetswijziging",
+      "@type": "skos:Concept",
+      "skos:definition": {
+        "@language": "nl",
+        "@value": "De notificatie heeft betrekking op een wetswijziging."
+      },
+      "skos:inScheme": "http://data.vlaanderen.be/id/concept/notificatietype",
+      "skos:notation": "Wetswijziging",
+      "skos:prefLabel": {
+        "@language": "nl",
+        "@value": "Wetswijziging"
+      },
+      "broader": "http://data.vlaanderen.be/doc/concept/notificatietype/InformatiefBericht"
+    }
+  ]
+}

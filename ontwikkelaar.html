@@ -337,6 +337,62 @@
                 <strong>Aanbeveling:</strong> tenzij het belangrijk is om de lokale identificator mee te geven in het kader van informatie uitwisseling, in welk geval het nuttig kan zijn <a href="https://docs.google.com/document/d/1tbK17wmgkIlNOXjYRE3Arf3PMI--8TvidBprKOcgcvQ/edit#heading=h.g91vhgxio1p" target="_blank">gebruik te maken van een URI</a>, hoeft de blank node identifier niet expliciet te worden meegegeven in een “@id” key. Tijdens de parsing van JSON-LD zullen automatisch blank node identifiers worden toegekend door de reasoner.
               </div>
 
+              <div class="suggestie">
+                <strong>Verduidelijking:</strong> “@id” kan ook voorkomen als value voor “@type” in de context definitie. Hiermee wordt aangegeven dat het verwacht type voor een bepaald eigenschap een URI is.
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_verwachttype.jsonld?footer=no"></script>
+              </div>
+
+              </div>
+
+            </div>
+
+
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case6">Nesting en arrays</h2>
+              <p>In JSON-LD wordt het nesten van objecten gebruikt om relaties tussen objecten weer te geven, niet om een hiërarchisch verband voor te stellen. Elk genest object kan bijgevolg ook een eigen “@id” en “@type” hebben.</p><br>
+              <p>Net zoals bij JSON kunnen arrays weergegeven worden door gebruik te maken van vierkante haakjes. In tegenstelling tot JSON, zijn bij JSON-LD arrays standaard niet geordend. Om het concept van collecties te bewaren kan <a href="https://www.w3.org/TR/json-ld/#sets-and-lists" target="_blank">gebruik gemaakt worden van @list</a>.</p>
+              </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case7">Definiëren van codelijsten, taxonomieën en thesauri</h2>
+              <p>Het <a href="https://www.w3.org/TR/skos-primer/" target="_blank">Simple Knowledge Organisation System (SKOS)</a> is een generiek datamodel voor het delen van controlled vocabularies zoals codelijsten, thesauri en taxonomieën in een machine-leesbaar formaat op het Web. Het beschikbaar maken van codelijsten volgens SKOS brengt enkele voordelen met zich mee:</p><br>
+              <ul class="bullet-list bullet-list--check">
+                <li class="bullet-list__item"><strong>De-referencing:</strong> de principes van Linked Data zijn ook van toepassing op codelijsten en stellen dat elke term in een codelijst moet corresponderen met een URI op basis van het HTTP protocol. Mensen die een term uit een codelijst tegenkomen kunnen dan makkelijk de betekenis opzoeken door de URI in te voeren in een web browser.</li>
+                <li class="bullet-list__item"><strong>Machine-leesbaarheid:</strong> via de URI kan zowel een machine- als mens-leesbare versie van de codelijst worden opgehaald. SKOS is bovendien een W3C Recommendation, wat interoperabiliteit bevordert met andere systemen die SKOS implementeren.</li>
+                <li class="bullet-list__item"><strong>Meertaligheid:</strong> SKOS laat toe om makkelijk labels en definities in meerdere talen toe te voegen.</li>
+              </ul>
+              <br>
+              <p>Een codelijst kan in SKOS worden voorgesteld door gebruik te maken van de volgende klassen, eigenschappen en relaties:</p><br>
+              <ul class="bullet-list bullet-list--check">
+                <li class="bullet-list__item"><strong>skos:ConceptScheme:</strong> de codelijst zelf kan voorgesteld worden als een skos:ConceptScheme.</li>
+                <li class="bullet-list__item"><strong>skos:Concept:</strong> elke term in de codelijst is een instantie van de klasse skos:Concept.</li>
+                <li class="bullet-list__item"><strong>skos:hasTopConcept:</strong> deze eigenschap laat toe om een hiërarchie in een codelijst te stoppen, bijvoorbeeld types en subtypes, door voor een skos:ConceptScheme aan te duiden welke termen zich op het hoogste niveau bevinden.</li>
+                <li class="bullet-list__item"><strong>skos:inScheme:</strong> deze eigenschap laat toe om vanuit een bepaalde term (een skos:Concept) aan te geven bij welke codelijst deze behoort.</li>
+                <li class="bullet-list__item"><strong>skos:definition:</strong> deze eigenschap laat toe om een definitie (in tekstvorm) mee te geven aan een terms in de codelijst (een skos:Concept).</li>
+                <li class="bullet-list__item"><strong>skos:notation:</strong> deze eigenschap laat toe om aan een bepaalde term een code toe te kennen.</li>
+                <li class="bullet-list__item"><strong>skos:prefLabel:</strong> het (mens-leesbare) label dat geassocieerd is met de term.</li>
+              </ul>
+              <br>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> codelijst voor Burgerlijke Staat: omzetten van <a href="http://www.ibz.rrn.fgov.be/fileadmin/user_upload/nl/rr/instructies/IT-lijst/IT120_Burgerlijke_Staat_20170103.pdf" target="_blank">rijksregister IT 120</a> naar SKOS
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_skos_codelijst.jsonld?footer=no"></script>
+              </div>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> taxonomie in SKOS
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_skos_taxonomie.jsonld?footer=no"></script>
+              </div>
               </div>
 
             </div>

@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "skos":    "http://www.w3.org/2004/02/skos/core#",
+    "rdfs":    "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://data.vlaanderen.be/doc/concept/statusvlaamsefase",
+      "@type": "skos:ConceptScheme",
+      "rdfs:label": {
+        "@language": "nl",
+        "@value": "Status Vlaamse Fase"
+      }
+    },
+    {
+      "@id": "http://data.vlaanderen.be/doc/concept/statusvlaamsefase/01",
+      "@type": "skos:Concept",
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ],
+      "skos:inScheme": "http://data.vlaanderen.be/doc/concept/statusvlaamsefase",
+      "skos:notation": "01",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afgerond"
+        },
+        {
+          "@language": "en",
+          "@value": "Terminated"
+        }
+      ]
+    },
+    ...
+  ]
+}
