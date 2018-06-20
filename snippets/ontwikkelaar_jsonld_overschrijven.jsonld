@@ -1,0 +1,26 @@
+{
+  "@context": "http://data.vlaanderen.be/context/persoon.jsonld",
+  "@id": "https://data.vlaanderen.be/id/persoon/1234",
+  "@type": [ "GeregistreerdPersoon", "Inwoner" ],
+  "inwonerschap": {
+    "@id": "http://publications.europa.eu/resource/authority/country/BEL",
+    "plaats": {
+      "@value": "België",
+      "@language": "nl"
+    }
+  }
+  "heeftGeboorte": {
+    "@context": {
+  	"plaats": {
+  	  "@id": "http://data.vlaanderen.be/ns/persoon#plaats",
+  	  "@type": "http://www.w3.org/ns/locn#Address"
+  	}
+    },
+    "datum": "1983-11-21",
+    "plaats": {
+      "gemeentenaam": "Leuven",
+      "postcode": "3000",
+      "land": "België"
+    }
+  }
+}

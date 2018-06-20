@@ -1,0 +1,7 @@
+{
+   "@context": [
+   	   "http://data.vlaanderen.be/context/persoon.jsonld",
+   	   "http://data.vlaanderen.be/context/adres.jsonld"
+   ],
+   …
+}

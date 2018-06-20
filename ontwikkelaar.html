@@ -151,7 +151,7 @@
                   <strong>Voorbeeld:</strong> relationeel versus graph data model.<br><br>
                   Relationele data:
                   <div class="lightbox js-lightbox gallery">
-                      <a data-lightbox-item class="gallery__item" href="img/relationeel.png" data-size="810x346" itemprop="contentUrl">
+                      <a data-lightbox-item class="gallery__item" href="img/relationeel.png" data-size="1007x276" itemprop="contentUrl">
                         <figure>
                             <img itemprop="thumbnail" src="img/relationeel.png" srcset="img/relationeel.png 1x, img/relationeel.png 2x" alt="" />
                             <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Voorbeeld van een relationeel data model</figcaption>
@@ -161,7 +161,7 @@
                   <br>
                   Graph data:
                   <div class="lightbox js-lightbox gallery">
-                      <a data-lightbox-item class="gallery__item" href="img/graph.png" data-size="810x346" itemprop="contentUrl">
+                      <a data-lightbox-item class="gallery__item" href="img/graph.png" data-size="740x212" itemprop="contentUrl">
                         <figure>
                             <img itemprop="thumbnail" src="img/graph.png" srcset="img/graph.png 1x, img/graph.png 2x" alt="" />
                             <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Voorbeeld van graph data model</figcaption>
@@ -260,11 +260,60 @@
                   <strong>Voorbeeld:</strong> hergebruik van OSLO context definitie.<br><br>
                   <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_hergebruik.jsonld?footer=no"></script>
                 </div>
+                </li>
 
-              </li>
-                <li class="bullet-list__item"><strong>@id:</strong> een unieke identificator voor objecten.</li>
-                <li class="bullet-list__item"><strong>@type:</strong> bepaalt het type van het object of de node en kan ook meegegeven worden in de context.</li>
+                <li class="bullet-list__item"><strong>Combineren van meerdere context definities</strong><br>
+                <p>In vele gevallen is het mogelijk dat meerdere entiteiten uit verschillende vocabularia in hetzelfde JSON-LD object voorkomen. Daarom is het mogelijk om ook meerdere context referenties mee te geven in hetzelfde JSON-LD object. In het geval dat bepaalde termen overlappen, zal de laatst gedefinieerde term (in onderstaand voorbeeld uit de adres context) voorgaande termen met dezelfde benaming overschrijven.</p>
+                <br>
+                <div class="voorbeeld">
+                  <strong>Voorbeeld:</strong> hergebruik van OSLO context definitie.<br><br>
+                  <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_combineren.jsonld?footer=no"></script>
+                </div>
+                </li>
+
+                <li class="bullet-list__item"><strong>Gebruik van eigen termen</strong><br>
+                <p>Wanneer een bestaande API zijn informatie wil ontsluiten conform de OSLO semantische informatiemodellen als JSON-LD, zonder de reeds gebruikte keys aan te passen, kan er voor gekozen worden om een eigen context file te creëren. Het blijft evenwel een vereiste om eerst het <a href="analist.html#subcategorie" target="_blank">semantisch afstemmingstraject</a> te doorlopen. Voor meer informatie met betrekking tot het creëren van een context file refereren we naar de <a href="https://json-ld.org/spec/latest/json-ld/#the-context" target="_blank">JSON-LD specificatie</a>. Voor bestaande API’s kan de context definitie meegegeven worden in de HTTP Link Header in plaats van als onderdeel van de payload.</p>
+                <br>
+                <div class="voorbeeld">
+                  <strong>Voorbeeld:</strong> hergebruik van OSLO context definitie.<br><br>
+                  <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_html.html?footer=no"></script>
+                </div>
+                </li>
+
+                <li class="bullet-list__item"><strong>Bestaande context definitie uitbreiden</strong><br>
+                <p>Indien een JSON-LD object gebruik maakt van zowel OSLO als andere entiteiten, en indien deze andere entiteiten relevant zijn voor de uitwisselingen van informatie met andere toepassingen of agentschappen, kan een bestaande OSLO @context uitgebreid worden met nieuwe termen.</p>
+                <br>
+                <div class="voorbeeld">
+                  <strong>Voorbeeld:</strong> OSLO context definitie voor persoon uitbreiden met nieuwe termen van het <a href="http://xmlns.com/foaf/spec/" target="_blank">FOAF vocabularium</a> voor het weergeven van een profielfoto.<br><br>
+                  <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_nieuw.jsonld?footer=no"></script>
+                </div>
+                <div class="suggestie">
+                  <strong>Verduidelijking:</strong> Het is ook mogelijk om in een JSON-LD object gewone JSON attributen mee te geven, zonder deze te definiëren in de @context. Wanneer het object als JSON-LD geparsed wordt, zullen termen die niet voorkomen in de @context genegeerd worden. De term zal dus enkel beschikbaar zijn voor de lokale applicatie, binnen de bounded context.
+                </div>
+                </li>
+
+                <li class="bullet-list__item"><strong>Overschrijven van context definities</strong><br>
+                <p>In JSON-LD is het mogelijk om de definitie van termen te overschrijven. Dit is vooral relevant wanneer een bestaande API omgevormd wordt zonder de JSON-structuur aan te passen én wanneer bepaalde keys een andere betekenis hebben afhankelijk van het niveau waarop ze voorkomen.</p>
+                <br>
+                <div class="voorbeeld">
+                  <strong>Voorbeeld:</strong> de eigenschap ‘plaats’ heeft afhankelijk van waar het voorkomt in het JSON-LD object, ofwel als verwacht type <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" target="_blank">‘GeografischePlaats’</a>, wat de standaard optie is in OSLO en dus ook in de OSLO context definitie voor persoon staat, of <a href="http://www.w3.org/ns/locn#Address" target="_blank">‘Adresvoorstelling’</a>. In onderstaand voorbeeld wordt <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" target="_blank">‘GeografischePlaats’</a> als type gebruikt voor plaats onder ‘inwonerschap’ en overschreven met <a href="http://www.w3.org/ns/locn#Address" target="_blank">‘Adresvoorstelling’</a> in de context definitie  onder ‘heeftGeboorte’.<br><br>
+                  <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_overschrijven.jsonld?footer=no"></script>
+                </div>
+                </li>
               </ul>
+              </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case5">Omgaan met identificatoren</h2>
+              <p>...</p>
               </div>
 
             </div>
