@@ -122,7 +122,7 @@
               <div class="u-spacer--large">
                 <div class="u-spacer">
                 <h2 class="h2 u-named-anchor" id="subcategorie">Case 1: Een API opzetten</h2>
-                <p>REST en RDF, de technologie die Linked Data onderbouwd, delen een aantal fundamentele principes:</p>
+                <p>REST en RDF, de technologie die Linked Data onderbouwt, delen een aantal fundamentele principes:</p>
                 <br>
                 <ul class="bullet-list bullet-list--check">
                   <li class="bullet-list__item">Aan de basis van informatie ligt het concept ‘resource’;</li>
@@ -173,22 +173,59 @@
                   <div class="voorbeeld">
                     <strong>Voorbeeld:</strong> query voor het ophalen van gezinsleden in SQL (relationeel) vs. SPARQL (graph) voor een persoon.<br><br>
                     SQL:<br>
-                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/snippet1.html"></script>
+                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_sql.sql"></script>
                     SPARQL:<br>
-                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/snippet1.html"></script>
+                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_sparql.rq"></script>
                   </div>
-                  <p>Voor ondervragingen is SPARQL in dit geval compacter dan de traditionele relationele database query. Desalniettemin maken relationele databases het beheer (write) makkelijker omdat transacties een duidelijke betekenis hebben.</p>
+                  <p>Voor ondervragingen is SPARQL in dit geval compacter dan de traditionele relationele database query. Desalniettemin maken relationele databases het beheer (write) makkelijker omdat transacties een duidelijke betekenis hebben.</p><br>
                   </li>
-                  <li><strong>Gebruik van Triplestores</strong><br><br>
+                  <li class="bullet-list__item"><strong>Gebruik van Triplestores</strong><br><br>
                     <p>Triplestores vormen een subset van NoSQL databases waar informatie wordt opgeslagen als triples en opgevraagd kan worden door gebruik te maken van semantische queries met behulp van de query-taal <a href="https://www.w3.org/TR/sparql11-overview/" target="_blank">SPARQL</a>. Ze onderscheiden zich van andere NoSQL databases doordat ze efficiënt gebruik kunnen maken van URIs als identifiers. Daarnaast bieden triplestores native ondersteuning voor het gebruik van meerdere namespaces (meerdere informatiemodellen) door elkaar en het afleiden van niet-expliciete relaties door inferentie van het informatiemodel.
-                    Dit maakt triplestores uitermate geschikt om centraal informatie bij te houden uit meerdere bronnen met elk een eigen informatiemodel en waar bovendien veel relaties tussen de verschillende objecten bestaan. Er bestaan zowel open source triplestores zoals <a href="https://jena.apache.org/documentation/serving_data/" target="_blank">Apache Jena Fuseki</a> en <a href="https://virtuoso.openlinksw.com/" target="_blank">OpenLink Virtuoso</a>, als commerciële varianten zoals Neptune, dat onderdeel uitmaak van Amazon Web Services.</p>
+                    Dit maakt triplestores uitermate geschikt om centraal informatie bij te houden uit meerdere bronnen met elk een eigen informatiemodel en waar bovendien veel relaties tussen de verschillende objecten bestaan. Er bestaan zowel open source triplestores zoals <a href="https://jena.apache.org/documentation/serving_data/" target="_blank">Apache Jena Fuseki</a> en <a href="https://virtuoso.openlinksw.com/" target="_blank">OpenLink Virtuoso</a>, als commerciële varianten zoals <a href="https://aws.amazon.com/neptune/" target="_blank">Neptune</a>, dat onderdeel uitmaak van Amazon Web Services.</p>
                     <br>
-                    <p>Wanneer een triplestore gebruikt wordt in combinatie met een SPARQL endpoint om gegevens te ontsluiten kan dit resulteren in een zware belasting van de server, in het bijzonder wanneer meerdere requests tegelijk behandeld moeten worden. Om de performantie te verbeteren, kan gebruik gemaakt worden van caching technieken als Linked Data Fragments.</p>
+                    <p>Wanneer een triplestore gebruikt wordt in combinatie met een SPARQL endpoint om gegevens te ontsluiten kan dit resulteren in een zware belasting van de server, in het bijzonder wanneer meerdere requests tegelijk behandeld moeten worden. Om de performantie te verbeteren, kan gebruik gemaakt worden van caching technieken als <a href="http://linkeddatafragments.org/" target="_blank">Linked Data Fragments</a>.</p>
                   </li>
                 </ul>
                 </div>
               </div>
             </div>
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="subcategorie3">Case 3: Gegevensuitwisseling</h2>
+              <p>Naast een semantisch afgestemd informatiemodel heeft een toepassing nood aan een concrete methode voor gegevensuitwisseling. Een mogelijk formaat om semantiek mee te geven in API payloads is JSON-LD (JSON Linked Data). JSON-LD laat ontwikkelaars toe om applicaties en diensten die gebruik maken van JSON, met een minimale inspanning Linked Data enabled te maken.</p>
+              <br>
+              <p>De stabiele <a href="https://www.w3.org/TR/json-ld/" target="_blank">JSON-LD 1.0 specificatie</a> werd gepubliceerd door W3C als een <a href="https://www.w3.org/standards/faq#std" target="_blank">Recommendation</a>. De meest recente specificatie en documentatie is te vinden op <a href="https://json-ld.org/">json-ld.org</a>. JSON-LD kenmerkt zich door het toevoegen van volgende elementen aan een klassiek JSON object:</p>
+              <br>
+              <ul class="bullet-list bullet-list--check">
+                <li class="bullet-list__item"><strong>@context:</strong> bevat een oplijsting van keys die doorheen het JSON(-LD) object gebruikt worden samen met een link (IRI) die verwijst naar hun definitie en indien relevant een type die aangeeft wat de verwachte value is voor deze keys. Op deze manier wordt de “context” meegegeven aan de ontvanger van het JSON object.</li>
+                <li class="bullet-list__item"><strong>@id:</strong> een unieke identificator voor objecten.</li>
+                <li class="bullet-list__item"><strong>@type:</strong> bepaalt het type van het object of de node en kan ook meegegeven worden in de context.</li>
+              </ul>
+              <br>
+              <p>Voor een volledige uiteenzetting van de specificatie verwijzen we naar <a href="https://www.w3.org/TR/json-ld/" target="_blank">JSON-LD 1.0</a>.</p>
+              <br>
+              <p>De W3C Recommendation <a href="https://www.w3.org/TR/ldp-primer/" target="_blank">Linked Data Platform</a> is een specificatie die patronen aanreikt om RESTful HTTP services te bouwen die in staat zijn om read-write operaties uit te voeren op Linked Data. Daarnaast wint een specificatie in opbouw, <a href="https://www.hydra-cg.com/spec/latest/core/" target="_blank">Hypermedia Driven Web APIs (HYDRA)</a>, aan populariteit om Linked Data principes toe te passen op REST API’s door een vocabularium van termen aan te reiken waarmee generieke API clients gemaakt kunnen worden.
+              Tot slot is het mogelijk om bestaande REST API’s die gebruik maken van JSON om te vormen met minimale inspanning door een @context definitie mee te geven in de HTTP Link Header. Meer informatie hieromtrent is terug te vinden in de <a href="https://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld" target="_blank">JSON-LD specificatie</a>.</p>
+              <br>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> twee JSON-LD payloads met dezelfde data die niet uitwisselbaar zijn door verschillende terminologie.<br><br>
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_nietuitwisselbaar.json"></script>
+              </div>
+              <br>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> twee JSON-LD payloads met dezelfde data die wel uitwisselbaar zijn met JSON-LD.<br><br>
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_uitwisselbaar.json"></script>
+              </div>
+              </div>
+            </div>
+
+
+
+
+
+
             </div>
             </div>
             <div class="col--3-12 col--12-12--s col--4-12--m">

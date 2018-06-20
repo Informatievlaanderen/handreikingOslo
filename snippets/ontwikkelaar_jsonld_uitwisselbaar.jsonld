@@ -1,0 +1,23 @@
+{
+ "@context": {
+   “Organisatie":"http://www.w3.org/ns/org#Organization",
+   "voorkeursNaam ": "http://www.w3.org/2004/02/skos/core#prefLabel",
+   "alternatieveNaam ":"http://www.w3.org/2004/02/skos/core#altLabel"
+ },
+ "@id": "http://data.vlaanderen.be/id/organisatie/OVO002949",
+ "@type": “Organisatie",
+ “voorkeursNaam": " Agentschap Informatie Vlaanderen",
+ “alternatieveNaam": “AIV",
+}
+
+{
+ "@context": {
+   “Organisatie":"http://www.w3.org/ns/org#Organization",
+   "naam": "http://www.w3.org/2004/02/skos/core#prefLabel",
+   “afkorting":"http://www.w3.org/2004/02/skos/core#altLabel"
+ },
+ "@id": "http://data.vlaanderen.be/id/organisatie/OVO002949",
+ "@type": “Organisatie",
+ “naam": " Agentschap Informatie Vlaanderen",
+ “afkorting": “AIV",
+}
