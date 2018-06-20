@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
+  <link rel="stylesheet" href="css/customstyle.css" />
 
   <link rel="icon" sizes="192x192" href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/icon-highres-precomposed.png">
   <link rel="apple-touch-icon" href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/touch-icon-iphone-precomposed.png">
@@ -62,8 +63,7 @@
           <div class="grid">
             <div class="col--8-12 col--12-12--s col--8-12--m">
               <div class="content typography introduction" id="intro">
-                <p>Inleidende tekst over de pagina Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dolor et minima placeat quam tempore? A aspernatur culpa deleniti dignissimos, dolor praesentium ullam. A accusantium fugiat fugit
-                  harum mollitia nobis quas quasi quos repudiandae saepe, similique temporibus voluptas, voluptatum.</p>
+                <p>Ontwikkelaars bouwen applicaties op basis van vooraf beschreven informatiemodellen en business-vereisten. Twee cases komen aan bod die de stappen beschrijven die een ontwikkelaar kan toepassen bij het gebruik van OSLO. Case 1 legt uit hoe een API op te zetten die kan communiceren met andere componenten.  Case 2 betreft de situatie waarbij een database moet opgezet worden.</p>
               </div>
             </div>
             <!-- <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m">
@@ -105,16 +105,12 @@
                   <ul class="grid grid--is-stacked js-equal-height-container">
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
                       <a class="doormat js-equal-height" href="#subcategorie">
-                        <h2 class="doormat__title" data-clamp="2">CASE 1: eerste case</h2>
-                        <div class="doormat__text" data-clamp="3">Een beetje extra uitleg.
-                        </div>
+                        <h2 class="doormat__title" data-clamp="2">Case 1: Een API opzetten</h2>
                       </a>
                     </li>
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
                       <a class="doormat  js-equal-height" href="#subcategorie2">
-                        <h2 class="doormat__title" data-clamp="2">CASE 2: tweede case</h2>
-                        <div class="doormat__text">Hier ook een beetje extra uitleg.
-                        </div>
+                        <h2 class="doormat__title" data-clamp="2">Case 2: Een database opzetten</h2>
                       </a>
                     </li>
                   </ul>
@@ -125,48 +121,74 @@
 
               <div class="u-spacer--large">
                 <div class="u-spacer">
-                <h2 class="h2 u-named-anchor" id="subcategorie">CASE 1: eerste case</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros.</p>
+                <h2 class="h2 u-named-anchor" id="subcategorie">Case 1: Een API opzetten</h2>
+                <p>REST en RDF, de technologie die Linked Data onderbouwd, delen een aantal fundamentele principes:</p>
+                <br>
+                <ul class="bullet-list bullet-list--check">
+                  <li class="bullet-list__item">Aan de basis van informatie ligt het concept ‘resource’;</li>
+                  <li class="bullet-list__item">Maken gebruik van HTTP(S) en HTTP(S) URI’s;</li>
+                  <li class="bullet-list__item">Zelfbeschrijvend, er is geen voorkennis nodig om de relaties tussen resources te begrijpen;</li>
+                  <li class="bullet-list__item">Geschikt voor Domain Driven Design.</li>
+                </ul>
+                <br>
+                <p>In combinatie zijn ze in staat om resources (data) te ontsluiten samen met het achterliggend informatiemodel, gebruik te maken van meer gesofisticeerde semantiek voor state-transitions en het Web of Data write-enabled te maken.</p>
+                <br>
+                <p>De W3C Recommendation <a href="https://www.w3.org/TR/ldp-primer/" target="_blank">Linked Data Platform</a> is een specificatie die patronen aanreikt om RESTful HTTP services te bouwen die in staat zijn om read-write operaties uit te voeren op Linked Data. Daarnaast wint een specificatie in opbouw, <a href="https://www.hydra-cg.com/spec/latest/core/" target="_blank">Hypermedia Driven Web APIs (HYDRA)</a>, aan populariteit om Linked Data principes toe te passen op REST API’s door een vocabularium van termen aan te reiken waarmee generieke API clients gemaakt kunnen worden.
+                Tot slot is het mogelijk om bestaande REST API’s die gebruik maken van JSON om te vormen met minimale inspanning door een @context definitie mee te geven in de HTTP Link Header. Meer informatie hieromtrent is terug te vinden in de <a href="https://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld" target="_blank">JSON-LD specificatie</a>.</p>
                 </div>
 
-                <div class="u-spacer">
-                <h3 class="h3 u-named-anchor" id="subcategorie-sub1">Stap 1</h3>
-                <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
 
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
-                </div>
-                </div>
-
-                <h3 class="h3 u-named-anchor" id="subcategorie-sub2">Stap 2</h3>
-                <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
-
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
-                </div>
-              </div>
               <div class="u-spacer--large">
                 <div class="u-spacer">
-                <h2 class="h2 u-named-anchor" id="subcategorie2">CASE 2: tweede case</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros.</p>
-                </div>
-
-                <div class="u-spacer">
-                <h3 class="h3 u-named-anchor" id="subcategorie2-sub1">Stap 1</h3>
-                <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
-
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
-                </div>
-                </div>
-
-                <h3 class="h3 u-named-anchor" id="subcategorie2-sub2">Stap 2</h3>
-                <div class="typograpy clearfix">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia posuere diam rutrum porta. Aliquam a nunc at velit tempus facilisis mattis sit amet eros. Proin dictum dapibus mauris nec viverra. Etiam molestie, est a tempus cursus, justo justo tincidunt mauris, ac hendrerit enim mi in eros. Morbi porttitor felis ac orci hendrerit aliquam. Sed sit amet varius enim. Praesent ullamcorper, lectus pulvinar hendrerit ullamcorper, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus, sem neque egestas ligula, at imperdiet ligula enim ut diam.</p>
-
-                <p>In blandit mi ultrices tincidunt blandit. In hac habitasse platea dictumst. Duis eget est tempor, malesuada mauris vel, mollis dui. In quis placerat sem, sit amet cursus urna. Pellentesque tellus lectus, mattis vitae porttitor condimentum, consequat id odio. Morbi mattis, magna et aliquam pretium, quam neque tempor ex, ac efficitur leo est sed sapien.</p>
+                <h2 class="h2 u-named-anchor" id="subcategorie2">Case 2: Een database opzetten</h2>
+                <p>Bij het opzetten van een database worden volgende zaken best in acht genomen:</p>
+                <br>
+                <ul class="bullet-list bullet-list--check">
+                  <li class="bullet-list__item"><strong>Gebruik van NoSQL databases.</strong><br>
+                  Linked Data is gebaseerd op graph data, waarbij in tegenstelling tot een relationeel of hiërarchisch data model, objecten rechtstreeks aan elkaar gelinkt worden, via relaties, en deze relaties ook rechtstreeks deel kunnen uitmaken van een query.
+                  <br>
+                  <div class="voorbeeld">
+                  <strong>Voorbeeld:</strong> relationeel versus graph data model.<br><br>
+                  Relationele data:
+                  <div class="lightbox js-lightbox gallery">
+                      <a data-lightbox-item class="gallery__item" href="img/relationeel.png" data-size="810x346" itemprop="contentUrl">
+                        <figure>
+                            <img itemprop="thumbnail" src="img/relationeel.png" srcset="img/relationeel.png 1x, img/relationeel.png 2x" alt="" />
+                            <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Voorbeeld van een relationeel data model</figcaption>
+                        </figure>
+                      </a>
+                  </div>
+                  <br>
+                  Graph data:
+                  <div class="lightbox js-lightbox gallery">
+                      <a data-lightbox-item class="gallery__item" href="img/graph.png" data-size="810x346" itemprop="contentUrl">
+                        <figure>
+                            <img itemprop="thumbnail" src="img/graph.png" srcset="img/graph.png 1x, img/graph.png 2x" alt="" />
+                            <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Voorbeeld van graph data model</figcaption>
+                        </figure>
+                      </a>
+                  </div>
+                  </div>
+                  <p>NoSQL databases zoals MongoDB, CouchDB, Neo4J, Virtuoso en Redis zijn dankzij hun performantie en flexibiliteit om complexe semi-gestructureerde data op te slaan meer geschikt dan traditionele relationele databases om Linked Data applicaties te onderbouwen.</p>
+                  <div class="voorbeeld">
+                    <strong>Voorbeeld:</strong> query voor het ophalen van gezinsleden in SQL (relationeel) vs. SPARQL (graph) voor een persoon.<br><br>
+                    SQL:<br>
+                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/snippet1.html"></script>
+                    SPARQL:<br>
+                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/snippet1.html"></script>
+                  </div>
+                  <p>Voor ondervragingen is SPARQL in dit geval compacter dan de traditionele relationele database query. Desalniettemin maken relationele databases het beheer (write) makkelijker omdat transacties een duidelijke betekenis hebben.</p>
+                  </li>
+                  <li><strong>Gebruik van Triplestores</strong><br><br>
+                    <p>Triplestores vormen een subset van NoSQL databases waar informatie wordt opgeslagen als triples en opgevraagd kan worden door gebruik te maken van semantische queries met behulp van de query-taal <a href="https://www.w3.org/TR/sparql11-overview/" target="_blank">SPARQL</a>. Ze onderscheiden zich van andere NoSQL databases doordat ze efficiënt gebruik kunnen maken van URIs als identifiers. Daarnaast bieden triplestores native ondersteuning voor het gebruik van meerdere namespaces (meerdere informatiemodellen) door elkaar en het afleiden van niet-expliciete relaties door inferentie van het informatiemodel.
+                    Dit maakt triplestores uitermate geschikt om centraal informatie bij te houden uit meerdere bronnen met elk een eigen informatiemodel en waar bovendien veel relaties tussen de verschillende objecten bestaan. Er bestaan zowel open source triplestores zoals <a href="https://jena.apache.org/documentation/serving_data/" target="_blank">Apache Jena Fuseki</a> en <a href="https://virtuoso.openlinksw.com/" target="_blank">OpenLink Virtuoso</a>, als commerciële varianten zoals Neptune, dat onderdeel uitmaak van Amazon Web Services.</p>
+                    <br>
+                    <p>Wanneer een triplestore gebruikt wordt in combinatie met een SPARQL endpoint om gegevens te ontsluiten kan dit resulteren in een zware belasting van de server, in het bijzonder wanneer meerdere requests tegelijk behandeld moeten worden. Om de performantie te verbeteren, kan gebruik gemaakt worden van caching technieken als Linked Data Fragments.</p>
+                  </li>
+                </ul>
                 </div>
               </div>
+            </div>
             </div>
             </div>
             <div class="col--3-12 col--12-12--s col--4-12--m">

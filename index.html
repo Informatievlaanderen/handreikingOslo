@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
+  <link rel="stylesheet" href="css/customstyle.css" />
 
   <link rel="icon" sizes="192x192" href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/icon-highres-precomposed.png">
   <link rel="apple-touch-icon" href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/touch-icon-iphone-precomposed.png">
@@ -62,7 +63,7 @@
           <div class="grid">
             <div class="col--8-12 col--12-12--s col--8-12--m">
               <div class="content typography introduction" id="intro">
-                <p>Om het hergebruik van gegevens te stimuleren, voorziet deze een handleiding om met OSLO² aan de slag te gaan vanuit verschillende perspectieven.</p>
+                <p>Om hergebruik van gegevens te stimuleren, voorziet deze een handleiding om met OSLO² aan de slag te gaan vanuit verschillende perspectieven.</p>
               </div>
             </div>
             <!-- <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m">
@@ -96,13 +97,13 @@
           <div class="grid">
             <div class="col--9-12 col--12-12--s col--8-12--m">
               <div class="u-spacer--large">
-                <h2 class="h2 u-named-anchor" id="subcategorie">Wat is OSLO²?</h2>
+                <h2 class="h2 u-named-anchor" id="subcategorie">Wat is OSLO?</h2>
                 <div class="typograpy clearfix">
                 <p>Vele (publieke) organisaties houden allerhande gegevens en wisselen die onderling uit. Om dit proces te vereenvoudigen, te stroomlijnen en te automatiseren, is OSLO, Open Standaarden voor Linkende Organisaties er. Dit initiatief van de Vlaamse Overheid wil het delen van data en gegevens vlotter doen verlopen, door betekenissen vast te leggen van concepten, woorden en definities (waardoor semantische discussies vermeden worden) en hoe deze te structureren in eigen databases of softwarepakketten. Op die manier ontstaan er kwaliteitsvolle up-to-date data en wordt er vermeden dat er lokale schaduwdatabanken ontstaan.</p>
                 </div>
               </div>
               <div class="u-spacer--large">
-                <h2 class="h2 u-named-anchor" id="subcategorie2">Waarom OSLO²?</h2>
+                <h2 class="h2 u-named-anchor" id="subcategorie2">Waarom OSLO en interoperabiliteit?</h2>
                 <div class="typograpy clearfix">
                 <p>Overheden in Vlaanderen leveren meer dan duizend publieke diensten aan burgers en ondernemers. De processen achter deze diensten worden ondersteund door verschillende gespecialiseerde toepassingen van verschillende softwareleveranciers. Het doel van OSLO is om te zorgen voor meer samenhang, een betere begrijpbaarheid en vindbaarheid van informatie en dienstverlening.</p>
 
@@ -110,7 +111,7 @@
                 <br>
                 <ul class="bullet-list bullet-list--tag">
                   <li class="bullet-list__item"><a href=# target="_blank">Lees meer over de uitwisselbaarheid van informatie, webstandaarden en Europese standaarden.</a></li>
-                  <li class="bullet-list__item"><a href=# target="_blank">Lees meer over LB-LOD (ABB) en andere projecten die werken volgens deze principes.</a></li>
+                  <li class="bullet-list__item"><a href="#subcategorie4">Lees meer over LB-LOD (ABB) en andere projecten die werken volgens deze principes.</a></li>
                 <ul>
                 </div>
               </div>
@@ -151,10 +152,41 @@
               <div class="u-spacer--large">
                 <h2 class="h2 u-named-anchor" id="subcategorie3">Hoe ga ik aan de slag met OSLO?</h2>
                 <div class="typograpy clearfix">
-                <p>Informatie Vlaanderen heeft profielgebaseerde handleidingen en verschillende resources ter beschikking.
-                De resources bestaan uit vocabularia die de basis zijn voor open semantische informatiestandaarden, ze bieden een gedeeld begrippenkader voor bepaalde concepten met focus op gegevensuitwisseling en kwamen tot stand in de werkgroep OSLO². </p>
-                <p>Anderzijds bestaan de resources uit applicatieprofielen waarbij er naast een gedeeld begrippenkader ook bijkomende restricties kunnen worden opgelegd (bv. vastleggen van kardinaliteiten, gebruik van bepaalde codelijsten). Het applicatieprofiel is een specificatie voor gegevensuitwisselingen voor applicaties in een bepaalde context / die bepaalde use cases vervullen.</p>
+                <p>Informatie Vlaanderen heeft <strong>profielgebaseerde handreikingen</strong> en verschillende <strong>resources</strong> ter beschikking.
+                De resources bestaan uit <strong>vocabularia</strong> die dienen als een blokkendoos met termen die te combineren zijn tot applicatieprofielen. In functie van noodzaak zijn deze ook uitbreidbaar volgens bepaalde regels. Wat je niet kan gebruiken laat je gewoon weg. Een bouwblok bestaat uit klassen, attributen, datatypes enz. Een eenvoudig voorbeeld is de klasse “persoon” met “naam” als een attribuut en als datatype “string”.</p>
+                <p>Anderzijds bestaan de resources ook uit <strong>applicatieprofielen</strong>. Een applicatieprofiel is een specifieke combinatie van termen voor een bepaalde applicatie of digitale toepassing. Hierbij wordt er ook al rekening gehouden met bepaalde regels in de business zoals kardinaliteiten en het gebruik van bepaalde codelijsten.</p>
                 </div>
+              </div>
+
+              <div class="u-spacer">
+                  <h2 class="h3 u-named-anchor" id="handleidingen">Profielgebaseerde handleidingen</h2>
+
+                  <!-- demo doormat component in grid -->
+                  <ul class="grid grid--is-stacked js-equal-height-container">
+                    <li class="col--4-12 col--6-12--m col--12-12--xs">
+                      <a class="doormat js-equal-height" href="businessverantwoordelijke.html">
+                        <h2 class="doormat__title" data-clamp="2">Business verantwoordelijke</h2>
+                        <div class="doormat__text" data-clamp="3">Integreren van de informatiestrategie in een projectplan.
+                        </div>
+                      </a>
+                    </li>
+                    <li class="col--4-12 col--6-12--m col--12-12--xs">
+                      <a class="doormat  js-equal-height" href="analist.html">
+                        <h2 class="doormat__title" data-clamp="2">Analist</h2>
+                        <div class="doormat__text">Uitwerken van een informatiemodel op basis van de behoeften.
+                        </div>
+                      </a>
+                    </li>
+                        <li class="col--4-12 col--6-12--m col--12-12--xs">
+                      <a class="doormat  js-equal-height" href="ontwikkelaar.html">
+                        <h2 class="doormat__title" data-clamp="2">Ontwikkelaar</h2>
+                        <div class="doormat__text" data-clamp="3">Implementeren van semantische afspraken in elektronische diensten.
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- end component -->
+
               </div>
 
               <div class="u-spacer">
@@ -170,54 +202,16 @@
                       </a>
                     </li>
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
+                      <a class="doormat  js-equal-height" href="http://data.vlaanderen.be/ns/" target="_blank">
+                        <h2 class="doormat__title" data-clamp="2">Vocabularia, applicatieprofielen en codelijsten</h2>
+                        <div class="doormat__text">Lijst van de beschikbare Vocabularia, applicatieprofielen en codelijsten.
+                        </div>
+                      </a>
+                    </li>
+                    <li class="col--4-12 col--6-12--m col--12-12--xs">
                       <a class="doormat  js-equal-height" href=# target="_blank">
-                        <h2 class="doormat__title" data-clamp="2">Tool</h2>
-                        <div class="doormat__text">Aan te vullen.
-                        </div>
-                      </a>
-                    </li>
-                    <!-- <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat  js-equal-height" href="#">
-                        <h2 class="doormat__title" data-clamp="2">Resource 3</h2>
-                        <div class="doormat__text">Lorem ipsum dolor sit amet, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus.
-                        </div>
-                      </a>
-                    </li>
-                    <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat  js-equal-height" href="#">
-                        <h2 class="doormat__title" data-clamp="2">Resource 4</h2>
-                        <div class="doormat__text" data-clamp="3">Lorem ipsum dolor sit amet, eros lacus dignissim metus, sed scelerisque massa magna ac nunc. Sed mollis lectus ac dolor mattis, quis congue tellus tincidunt. In et arcu lectus. Duis vel ipsum eu justo molestie eleifend. Phasellus rutrum, magna a pulvinar finibus.
-                        </div>
-                      </a>
-                    </li> -->
-                  </ul>
-                  <!-- end component -->
-
-              </div>
-
-              <div class="u-spacer">
-                  <h2 class="h3 u-named-anchor" id="handleidingen">Profielgebaseerde handleidingen</h2>
-
-                  <!-- demo doormat component in grid -->
-                  <ul class="grid grid--is-stacked js-equal-height-container">
-                    <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat js-equal-height" href="businessverantwoordelijke.html">
-                        <h2 class="doormat__title" data-clamp="2">Business verantwoordelijke</h2>
-                        <div class="doormat__text" data-clamp="3">Specifieke handleiding voor business verantwoordelijken.
-                        </div>
-                      </a>
-                    </li>
-                    <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat  js-equal-height" href="analist.html">
-                        <h2 class="doormat__title" data-clamp="2">Analist</h2>
-                        <div class="doormat__text">Specifieke handleiding voor technische en funcionele analisten.
-                        </div>
-                      </a>
-                    </li>
-                        <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat  js-equal-height" href="ontwikkelaar.html">
-                        <h2 class="doormat__title" data-clamp="2">Ontwikkelaar</h2>
-                        <div class="doormat__text" data-clamp="3">Specifieke handleiding voor ontwikkelaars.
+                        <h2 class="doormat__title" data-clamp="2">OSLO Checklist</h2>
+                        <div class="doormat__text">...
                         </div>
                       </a>
                     </li>
@@ -225,6 +219,8 @@
                   <!-- end component -->
 
               </div>
+
+
 
               <div class="u-spacer">
                 <h2 class="h3 u-named-anchor" id="subcategorie2">Ondersteuning</h2>
