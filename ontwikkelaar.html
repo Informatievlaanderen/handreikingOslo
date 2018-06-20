@@ -173,9 +173,9 @@
                   <div class="voorbeeld">
                     <strong>Voorbeeld:</strong> query voor het ophalen van gezinsleden in SQL (relationeel) vs. SPARQL (graph) voor een persoon.<br><br>
                     SQL:<br>
-                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_sql.sql"></script>
+                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_sql.sql?footer=no"></script>
                     SPARQL:<br>
-                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_sparql.rq"></script>
+                    <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_sparql.rq?footer=no"></script>
                   </div>
                   <p>Voor ondervragingen is SPARQL in dit geval compacter dan de traditionele relationele database query. Desalniettemin maken relationele databases het beheer (write) makkelijker omdat transacties een duidelijke betekenis hebben.</p><br>
                   </li>
@@ -211,14 +211,62 @@
               <br>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> twee JSON-LD payloads met dezelfde data die niet uitwisselbaar zijn door verschillende terminologie.<br><br>
-                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_nietuitwisselbaar.json"></script>
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_nietuitwisselbaar.jsonld?footer=no"></script>
               </div>
               <br>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> twee JSON-LD payloads met dezelfde data die wel uitwisselbaar zijn met JSON-LD.<br><br>
-                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_uitwisselbaar.json"></script>
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_uitwisselbaar.jsonld?footer=no" footer="no"></script>
               </div>
               </div>
+            </div>
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case4">Gebruik van @context definities</h2>
+              <p>De @context heeft als doel de semantiek samen met de data te ontsluiten. Dit kan op verschillende manieren gebeuren:</p>
+              <br>
+              <ul class="bullet-list bullet-list--check">
+                <li class="bullet-list__item"><strong>Hergebruik van bestaande context definitie</strong><br>
+                Voor OSLO vocabularia bestaan herbruikbare context files in JSON-LD formaat waar naar verwezen kan worden vanuit een JSON-LD object.<br><br>
+                <table>
+                  <tr>
+                    <td><strong>OSLO vocabularium</strong></td>
+                    <td><strong>Context file</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Generiek</td>
+                    <td><a href="http://data.vlaanderen.be/context/generiek.jsonld" target="_blank">http://data.vlaanderen.be/context/generiek.jsonld</a></td>
+                  </tr>
+                  <tr>
+                    <td>Adres</td>
+                    <td><a href="http://data.vlaanderen.be/context/adres.jsonld" target="_blank">http://data.vlaanderen.be/context/adres.jsonld</a></td>
+                  </tr>
+                  <tr>
+                    <td>Persoon</td>
+                    <td><a href="http://data.vlaanderen.be/context/persoon.jsonld" target="_blank">http://data.vlaanderen.be/context/persoon.jsonld</a></td>
+                  </tr>
+                  <tr>
+                    <td>Organisatie</td>
+                    <td><a href="http://data.vlaanderen.be/context/organisatie.jsonld" target="_blank">http://data.vlaanderen.be/context/organisatie.jsonld</a></td>
+                  </tr>
+                  <tr>
+                    <td>Dienst</td>
+                    <td><a href="http://data.vlaanderen.be/context/dienst.jsonld" target="_blank">http://data.vlaanderen.be/context/dienst.jsonld</a></td>
+                  </tr>
+                </table>
+                <br>
+                <div class="voorbeeld">
+                  <strong>Voorbeeld:</strong> hergebruik van OSLO context definitie.<br><br>
+                  <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_hergebruik.jsonld?footer=no"></script>
+                </div>
+
+              </li>
+                <li class="bullet-list__item"><strong>@id:</strong> een unieke identificator voor objecten.</li>
+                <li class="bullet-list__item"><strong>@type:</strong> bepaalt het type van het object of de node en kan ook meegegeven worden in de context.</li>
+              </ul>
+              </div>
+
             </div>
 
 

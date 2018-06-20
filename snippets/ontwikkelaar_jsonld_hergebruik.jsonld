@@ -1,0 +1,7 @@
+{
+    "@context": "http://data.vlaanderen.be/context/persoon.jsonld",
+    "@id": "http://data.vlaanderen.be/id/persoon/1234",
+    "@type": "Persoon",
+    "voornaam": [ "Jan" ],
+    "achternaam": [ "Janssens" ]
+}
