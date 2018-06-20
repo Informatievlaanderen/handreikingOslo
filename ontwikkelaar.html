@@ -313,7 +313,30 @@
             <div class="u-spacer--large">
               <div class="u-spacer">
               <h2 class="h2 u-named-anchor" id="case5">Omgaan met identificatoren</h2>
-              <p>...</p>
+              <p>In Linked Data, en zo ook in JSON-LD, wordt als identificator voor een object waar mogelijk gebruik gemaakt van een URI (uniform resource identifier). In JSON-LD kan elk ‘node object’ een eigen identificator hebben, aangeduid met de key “@id”. Om hier invulling aan te geven kan gebruik gemaakt worden van absolute URI’s,  relatieve URI’s of ‘blank node identifiers’.</p>
+              <br>
+              Bij <strong>Absolute URI’s</strong> wordt de volledige URI meegegeven als waarde van de “@id” key.
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> absolute URI’s
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_absoluteuri.jsonld?footer=no"></script>
+              </div>
+
+              <p>Wanneer de value van de “@id” key niet start met http(s) wordt de string geïnterpreteerd als een <strong>relatieve URI</strong>.  Als basis wordt dan de URI van de request header genomen. Alternatief kan in de context definitie ook een ‘base URI’ vastgelegd worden.</p>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> relatieve URI’s
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_relatieveuri.jsonld?footer=no"></script>
+              </div>
+
+              <p>Een <strong>blank node identifier</strong> is een string die dienst doet als identificator voor een <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node" target="_blank">blank node</a> object. Een blank node identifier is een lokale identificator en is niet persistent, waardoor ze niet bruikbaar zijn buiten de applicatie of service waar ze hun oorsprong vinden. Blank node identifiers hebben steeds _: als prefix, opdat ze niet als relatieve URI zouden geïnterpreteerd worden.</p>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> gebruik van blank node identifiers
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_relatieveuri.jsonld?footer=no"></script>
+              </div>
+
+              <div class="aanbeveling">
+                <strong>Aanbeveling:</strong> tenzij het belangrijk is om de lokale identificator mee te geven in het kader van informatie uitwisseling, in welk geval het nuttig kan zijn <a href="https://docs.google.com/document/d/1tbK17wmgkIlNOXjYRE3Arf3PMI--8TvidBprKOcgcvQ/edit#heading=h.g91vhgxio1p" target="_blank">gebruik te maken van een URI</a>, hoeft de blank node identifier niet expliciet te worden meegegeven in een “@id” key. Tijdens de parsing van JSON-LD zullen automatisch blank node identifiers worden toegekend door de reasoner.
+              </div>
+
               </div>
 
             </div>
