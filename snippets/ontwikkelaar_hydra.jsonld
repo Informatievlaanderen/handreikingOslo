@@ -1,0 +1,28 @@
+{
+  "@context": [
+  	{
+  		"@vocab": "http://www.w3.org/ns/ldp#"
+  	},
+  	"https://data.vlaanderen.be/context/melding.jsonld"
+  ],
+  "@id": "https://meldingen.vlaanderen.be/api/v1/meldingen?page=3",
+  "@type": "PagedCollection",
+  "firstPage": "http://example.org/api/v1/meldingen",
+  "previousPage": "http://example.org/api/v1/meldingen?page=2",
+  "nextPage": "http://example.org/api/v1/meldingen?page=4",
+  "lastPage": "http://example.org/api/v1/meldingen?page=10",
+  "member": [
+    {
+		"@id": "https://melding.vlaanderen.be/api/v1/meldingen/12cfa9e3-9d14-4434-b17b-5f31792334bf",
+		...
+    },
+    {
+		"@id": "https://melding.vlaanderen.be/api/v1/meldingen/76aebbd7-25b9-46ba-9a9b-e4f0f063cf57",
+		...
+    },
+    {
+		"@id": "https://melding.vlaanderen.be/api/v1/meldingen/b20e813f-e603-46fc-bbf0-e912ea99d6a5",
+		...
+    }
+  ]
+}

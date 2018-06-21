@@ -318,18 +318,24 @@
               Bij <strong>Absolute URI’s</strong> wordt de volledige URI meegegeven als waarde van de “@id” key.
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> absolute URI’s
+                <br>
+                <br>
                 <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_absoluteuri.jsonld?footer=no"></script>
               </div>
 
               <p>Wanneer de value van de “@id” key niet start met http(s) wordt de string geïnterpreteerd als een <strong>relatieve URI</strong>.  Als basis wordt dan de URI van de request header genomen. Alternatief kan in de context definitie ook een ‘base URI’ vastgelegd worden.</p>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> relatieve URI’s
+                <br>
+                <br>
                 <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_relatieveuri.jsonld?footer=no"></script>
               </div>
 
               <p>Een <strong>blank node identifier</strong> is een string die dienst doet als identificator voor een <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node" target="_blank">blank node</a> object. Een blank node identifier is een lokale identificator en is niet persistent, waardoor ze niet bruikbaar zijn buiten de applicatie of service waar ze hun oorsprong vinden. Blank node identifiers hebben steeds _: als prefix, opdat ze niet als relatieve URI zouden geïnterpreteerd worden.</p>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> gebruik van blank node identifiers
+                <br>
+                <br>
                 <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_relatieveuri.jsonld?footer=no"></script>
               </div>
 
@@ -339,6 +345,8 @@
 
               <div class="suggestie">
                 <strong>Verduidelijking:</strong> “@id” kan ook voorkomen als value voor “@type” in de context definitie. Hiermee wordt aangegeven dat het verwacht type voor een bepaald eigenschap een URI is.
+                <br>
+                <br>
                 <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_jsonld_verwachttype.jsonld?footer=no"></script>
               </div>
 
@@ -387,15 +395,137 @@
               <br>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> codelijst voor Burgerlijke Staat: omzetten van <a href="http://www.ibz.rrn.fgov.be/fileadmin/user_upload/nl/rr/instructies/IT-lijst/IT120_Burgerlijke_Staat_20170103.pdf" target="_blank">rijksregister IT 120</a> naar SKOS
+                <br>
+                <br>
                 <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_skos_codelijst.jsonld?footer=no"></script>
               </div>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> taxonomie in SKOS
+                <br>
+                <br>
                 <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_skos_taxonomie.jsonld?footer=no"></script>
               </div>
               </div>
 
             </div>
+
+
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case6">Containers en paginering</h2>
+              <p>Soms is het nodig om in één JSON(-LD) document meerdere top-level objecten mee te geven die allen dezelfde context delen als antwoord op een specifieke API request. Bijvoorbeeld om een overzichtspagina te maken of een oplijsting van objecten te tonen met een bepaalde filter erop toegepast. In deze gevallen kan gebruik gemaakt worden van <a href="https://www.hydra-cg.com/spec/latest/core/" target="_blank">HYDRA</a>. De HYDRA specificatie voor hypermedia-driven Web APIs  laat toe om meer informatie mee te geven aan een container, specifiek voor het aansturen van REST APIs, in lijn met de principes van Linked Data.</p><br><br>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> pagination meegeven met behulp van HYDRA
+                <br>
+                <br>
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_hydra.jsonld?footer=no"></script>
+              </div>
+              </div>
+
+            </div>
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case6">Input of output structuur vastleggen met JSON-LD framing</h2>
+              <p><a href="https://json-ld.org/spec/latest/json-ld-framing/" target="_blank">JSON-LD framing</a> is een techniek waarbij ontwikkelaars een bepaalde structuur (een frame) kunnen opleggen aan het JSON-LD payload. Er kan onder meer een onderscheid gemaakt worden tussen verplichte en optionele nodes en standaardwaarden voor attributen kunnen worden meegegeven. Op die manier kan consistentie gegarandeerd worden en kunnen deze frames dienen als basis voor tests, validatie en het toelaten van meerdere datastructuren langs input zijde. Het <a href="https://json-ld.org/spec/latest/json-ld-framing/#framing-algorithm" target="_blank">Framing Algoritme</a> is bovendien in staat om JSON-LD objecten om te zetten naar de gewenste structuur. Voor meer details verwijzen we naar de <a href="https://json-ld.org/spec/latest/json-ld-framing/" target="_blank">specificatie</a>.</p><br><br>
+              <div class="voorbeeld">
+                <strong>Voorbeeld:</strong> wanneer de “rol” informatie niet wordt meegegeven zal volgens onderstaand frame “Indiener” als standaardwaarde gebruikt worden.
+                <br>
+                <br>
+                <script src="https://gist-it.appspot.com/https://github.com/pwc-technology-be/handreikingOslo/blob/master/snippets/ontwikkelaar_framing.jsonld?footer=no"></script>
+              </div>
+              </div>
+
+            </div>
+
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case6">Beschikbare tools en libraries</h2>
+              <p>Er bestaan tools en libraries voor de meeste web-programmeertalen. Onderstaande tabel geeft een overzicht van JSON-LD processors en API’s in verschillende programmeertalen.</p>
+
+              <br>
+
+              <table>
+                <tr>
+                  <td><strong>Programmeertaal</strong></td>
+                  <td><strong>Wat?</strong></td>
+                  <td><strong>Link</strong></td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>JSON-LD Processor en API library</td>
+                  <td><a href="https://github.com/digitalbazaar/jsonld.js/ " target="_blank">https://github.com/digitalbazaar/jsonld.js/ </a></td>
+                </tr>
+                <tr>
+                  <td>Java</td>
+                  <td>JSON-LD Processor en API library</td>
+                  <td><a href="https://github.com/jsonld-java/jsonld-java" target="_blank">https://github.com/jsonld-java/jsonld-java</a></td>
+                </tr>
+                <tr>
+                  <td>.NET</td>
+                  <td>JSON-LD Processor</td>
+                  <td><a href="https://github.com/NuGet/json-ld.net" target="_blank">https://github.com/NuGet/json-ld.net</a></td>
+                </tr>
+                <tr>
+                  <td>PHP</td>
+                  <td>JSON-LD Processor en API library<br>
+EasyRDF Library voor RDF manipulatie (met ondersteuning voor JSON-LD)
+</td>
+                  <td><a href="https://github.com/digitalbazaar/php-json-ld" target="_blank">https://github.com/digitalbazaar/php-json-ld</a><br>
+                  <a href="http://www.easyrdf.org/" target="_blank">http://www.easyrdf.org/</a></td>
+                </tr>
+                <tr>
+                  <td>NodeJS</td>
+                  <td>JSON-LD Processor</td>
+                  <td><a href="https://www.npmjs.com/package/jsonld" target="_blank">https://www.npmjs.com/package/jsonld</a></td>
+                </tr>
+                <tr>
+                  <td>Ruby</td>
+                  <td>JSON-LD Processor en API library</td>
+                  <td><a href="https://rubygems.org/gems/json-ld" target="_blank">https://rubygems.org/gems/json-ld</a></td>
+                </tr>
+              </table>
+
+
+              <br>
+
+              <p>De OSLO tool <a href="https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator" target="_blank">SpecificationGenerator</a> kan gebruikt worden om vertrekkend uit een domeinmodel een JSON-LD context file te genereren. Verder is de <a href="https://json-ld.org/playground/" target="_blank">JSON-LD Playground</a> een handige tool om snel JSON-LD objecten te valideren op vlak van syntax.</p>
+              </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="u-spacer--large">
+              <div class="u-spacer">
+              <h2 class="h2 u-named-anchor" id="case6">Andere serialisaties</h2>
+              <p>Naast JSON-LD bestaan tal van andere serialisaties voor Linked Data, elk met een eigen syntax.
+              De meest gebruikte zijn:</p>
+              <br>
+              <ul class="bullet-list bullet-list--check">
+                <li class="bullet-list__item"><a href="https://www.w3.org/TR/rdf-syntax-grammar/" target="_blank">RDF/XML</a></li>
+                <li class="bullet-list__item"><a href="https://www.w3.org/TR/turtle/" target="_blank">Turtle</a></li>
+                <li class="bullet-list__item"><a href="https://www.w3.org/TR/n-triples/" target="_blank">N-triples</a></li>
+                <li class="bullet-list__item"><a href="https://www.w3.org/TeamSubmission/n3/" target="_blank">Notation3</a></li>
+                <li class="bullet-list__item"><a href="https://www.w3.org/TR/rdfa-syntax/" target="_blank">RDFa</a> (HTML annotaties)</li>
+              </ul>
+              </div>
+
+            </div>
+
+
+
 
 
 
