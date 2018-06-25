@@ -104,13 +104,23 @@
                   <!-- demo doormat component in grid -->
                   <ul class="grid grid--is-stacked js-equal-height-container">
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat js-equal-height" href="#subcategorie">
+                      <a class="doormat js-equal-height" href="#case1">
                         <h2 class="doormat__title" data-clamp="2">Case 1: Een API opzetten</h2>
                       </a>
                     </li>
                     <li class="col--4-12 col--6-12--m col--12-12--xs">
-                      <a class="doormat  js-equal-height" href="#subcategorie2">
+                      <a class="doormat  js-equal-height" href="#case2">
                         <h2 class="doormat__title" data-clamp="2">Case 2: Een database opzetten</h2>
+                      </a>
+                    </li>
+                    <li class="col--4-12 col--6-12--m col--12-12--xs">
+                      <a class="doormat  js-equal-height" href="#case3">
+                        <h2 class="doormat__title" data-clamp="2">Case 3: Gegevensuitwisseling</h2>
+                      </a>
+                    </li>
+                    <li class="col--4-12 col--6-12--m col--12-12--xs">
+                      <a class="doormat  js-equal-height" href="#case4">
+                        <h2 class="doormat__title" data-clamp="2">Case 2: Van tabulaire naar linked data</h2>
                       </a>
                     </li>
                   </ul>
@@ -121,7 +131,7 @@
 
               <div class="u-spacer--large">
                 <div class="u-spacer">
-                <h2 class="h2 u-named-anchor" id="subcategorie">Case 1: Een API opzetten</h2>
+                <h1 class="h1 u-named-anchor" id="case1">Case 1: Een API opzetten</h1>
                 <p>REST en RDF, de technologie die Linked Data onderbouwt, delen een aantal fundamentele principes:</p>
                 <br>
                 <ul class="bullet-list bullet-list--check">
@@ -140,7 +150,7 @@
 
               <div class="u-spacer--large">
                 <div class="u-spacer">
-                <h2 class="h2 u-named-anchor" id="subcategorie2">Case 2: Een database opzetten</h2>
+                <h1 class="h1 u-named-anchor" id="case2">Case 2: Een database opzetten</h1>
                 <p>Bij het opzetten van een database worden volgende zaken best in acht genomen:</p>
                 <br>
                 <ul class="bullet-list bullet-list--check">
@@ -193,7 +203,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="subcategorie3">Case 3: Gegevensuitwisseling</h2>
+              <h1 class="h1 u-named-anchor" id="case3">Case 3: Gegevensuitwisseling</h1>
               <p>Naast een semantisch afgestemd informatiemodel heeft een toepassing nood aan een concrete methode voor gegevensuitwisseling. Een mogelijk formaat om semantiek mee te geven in API payloads is JSON-LD (JSON Linked Data). JSON-LD laat ontwikkelaars toe om applicaties en diensten die gebruik maken van JSON, met een minimale inspanning Linked Data enabled te maken.</p>
               <br>
               <p>De stabiele <a href="https://www.w3.org/TR/json-ld/" target="_blank">JSON-LD 1.0 specificatie</a> werd gepubliceerd door W3C als een <a href="https://www.w3.org/standards/faq#std" target="_blank">Recommendation</a>. De meest recente specificatie en documentatie is te vinden op <a href="https://json-ld.org/">json-ld.org</a>. JSON-LD kenmerkt zich door het toevoegen van volgende elementen aan een klassiek JSON object:</p>
@@ -223,7 +233,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case4">Gebruik van @context definities</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub1">Gebruik van @context definities</h2>
               <p>De @context heeft als doel de semantiek samen met de data te ontsluiten. Dit kan op verschillende manieren gebeuren:</p>
               <br>
               <ul class="bullet-list bullet-list--check">
@@ -312,7 +322,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case5">Omgaan met identificatoren</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub2">Omgaan met identificatoren</h2>
               <p>In Linked Data, en zo ook in JSON-LD, wordt als identificator voor een object waar mogelijk gebruik gemaakt van een URI (uniform resource identifier). In JSON-LD kan elk ‘node object’ een eigen identificator hebben, aangeduid met de key “@id”. Om hier invulling aan te geven kan gebruik gemaakt worden van absolute URI’s,  relatieve URI’s of ‘blank node identifiers’.</p>
               <br>
               Bij <strong>Absolute URI’s</strong> wordt de volledige URI meegegeven als waarde van de “@id” key.
@@ -360,7 +370,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case6">Nesting en arrays</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub3">Nesting en arrays</h2>
               <p>In JSON-LD wordt het nesten van objecten gebruikt om relaties tussen objecten weer te geven, niet om een hiërarchisch verband voor te stellen. Elk genest object kan bijgevolg ook een eigen “@id” en “@type” hebben.</p><br>
               <p>Net zoals bij JSON kunnen arrays weergegeven worden door gebruik te maken van vierkante haakjes. In tegenstelling tot JSON, zijn bij JSON-LD arrays standaard niet geordend. Om het concept van collecties te bewaren kan <a href="https://www.w3.org/TR/json-ld/#sets-and-lists" target="_blank">gebruik gemaakt worden van @list</a>.</p>
               </div>
@@ -374,7 +384,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case7">Definiëren van codelijsten, taxonomieën en thesauri</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub4">Definiëren van codelijsten, taxonomieën en thesauri</h2>
               <p>Het <a href="https://www.w3.org/TR/skos-primer/" target="_blank">Simple Knowledge Organisation System (SKOS)</a> is een generiek datamodel voor het delen van controlled vocabularies zoals codelijsten, thesauri en taxonomieën in een machine-leesbaar formaat op het Web. Het beschikbaar maken van codelijsten volgens SKOS brengt enkele voordelen met zich mee:</p><br>
               <ul class="bullet-list bullet-list--check">
                 <li class="bullet-list__item"><strong>De-referencing:</strong> de principes van Linked Data zijn ook van toepassing op codelijsten en stellen dat elke term in een codelijst moet corresponderen met een URI op basis van het HTTP protocol. Mensen die een term uit een codelijst tegenkomen kunnen dan makkelijk de betekenis opzoeken door de URI in te voeren in een web browser.</li>
@@ -415,7 +425,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case6">Containers en paginering</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub5">Containers en paginering</h2>
               <p>Soms is het nodig om in één JSON(-LD) document meerdere top-level objecten mee te geven die allen dezelfde context delen als antwoord op een specifieke API request. Bijvoorbeeld om een overzichtspagina te maken of een oplijsting van objecten te tonen met een bepaalde filter erop toegepast. In deze gevallen kan gebruik gemaakt worden van <a href="https://www.hydra-cg.com/spec/latest/core/" target="_blank">HYDRA</a>. De HYDRA specificatie voor hypermedia-driven Web APIs  laat toe om meer informatie mee te geven aan een container, specifiek voor het aansturen van REST APIs, in lijn met de principes van Linked Data.</p><br><br>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> pagination meegeven met behulp van HYDRA
@@ -431,7 +441,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case6">Input of output structuur vastleggen met JSON-LD framing</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub6">Input of output structuur vastleggen met JSON-LD framing</h2>
               <p><a href="https://json-ld.org/spec/latest/json-ld-framing/" target="_blank">JSON-LD framing</a> is een techniek waarbij ontwikkelaars een bepaalde structuur (een frame) kunnen opleggen aan het JSON-LD payload. Er kan onder meer een onderscheid gemaakt worden tussen verplichte en optionele nodes en standaardwaarden voor attributen kunnen worden meegegeven. Op die manier kan consistentie gegarandeerd worden en kunnen deze frames dienen als basis voor tests, validatie en het toelaten van meerdere datastructuren langs input zijde. Het <a href="https://json-ld.org/spec/latest/json-ld-framing/#framing-algorithm" target="_blank">Framing Algoritme</a> is bovendien in staat om JSON-LD objecten om te zetten naar de gewenste structuur. Voor meer details verwijzen we naar de <a href="https://json-ld.org/spec/latest/json-ld-framing/" target="_blank">specificatie</a>.</p><br><br>
               <div class="voorbeeld">
                 <strong>Voorbeeld:</strong> wanneer de “rol” informatie niet wordt meegegeven zal volgens onderstaand frame “Indiener” als standaardwaarde gebruikt worden.
@@ -448,7 +458,7 @@
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case6">Beschikbare tools en libraries</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub7">Beschikbare tools en libraries</h2>
               <p>Er bestaan tools en libraries voor de meeste web-programmeertalen. Onderstaande tabel geeft een overzicht van JSON-LD processors en API’s in verschillende programmeertalen.</p>
 
               <br>
@@ -509,7 +519,7 @@ EasyRDF Library voor RDF manipulatie (met ondersteuning voor JSON-LD)
 
             <div class="u-spacer--large">
               <div class="u-spacer">
-              <h2 class="h2 u-named-anchor" id="case6">Andere serialisaties</h2>
+              <h2 class="h2 u-named-anchor" id="case3_sub8">Andere serialisaties</h2>
               <p>Naast JSON-LD bestaan tal van andere serialisaties voor Linked Data, elk met een eigen syntax.
               De meest gebruikte zijn:</p>
               <br>
@@ -525,7 +535,50 @@ EasyRDF Library voor RDF manipulatie (met ondersteuning voor JSON-LD)
             </div>
 
 
-
+            <div class="u-spacer">
+            <h1 class="h1 u-named-anchor" id="case4">Case 4: van tabulaire naar linked data</h1>
+            <p>Het merendeel van de bestaande data is enkel beschikbaar in tabulair formaat zoals Excel of CSV bestanden. Omzetten van deze tabulaire data naar linked data kan op verschillende manieren gebeuren. De meest geautomatiseerde manier is om een transformatiescript te programmeren die de relevante triples genereert op basis van de tabulaire data. Deze aanpak vereist programmeerervaring en een specifieke implementatie. Hier stellen we een alternatieve en meer toegankelijke werkwijze voor die steunt op <a href="http://openrefine.org/" target="_blank">Open Refine</a>.</p>
+            <br>
+            <p>Open Refine is een tool om met (rommelige) data te werken en laat toe om data op te schonen, te transformeren en uit te breiden. Om eveneens met linked data formaten te kunnen werken, is ook de <a href="http://openrefine.org/download.html" target="_blank">RDF extensie</a> voor Open Refine nodig. Eenmaal de software geïnstalleerd is, kunnen volgende stappen doorlopen worden om van tabulaire naar linked data te gaan:</p>
+            <br>
+            <ul class="bullet-list bullet-list--check">
+              <li class="bullet-list__item">Zorg dat een data- of informatiemodel beschikbaar is. Zie de <a href="analist.html" target="_blank">handreiking voor de analist</a> voor een stappenplan om een dergelijk model te ontwikkelen.</li>
+              <li class="bullet-list__item">Orden de tabulaire data zodat elke kolom een eigenschap van het model bevat. Onderstaande figuur illustreert dit voor een fictief voorbeeld waarbij een boek wordt omschreven door middel van een Titel, Beschrijving en een Klantenbeoordeling.
+              <div class="lightbox js-lightbox gallery">
+                  <a data-lightbox-item class="gallery__item" href="img/openrefine_data.png" data-size="1232x429" itemprop="contentUrl">
+                    <figure>
+                        <img itemprop="thumbnail" src="img/openrefine_data.png" srcset="img/openrefine_data.png 1x, img/openrefine_data.png 2x" alt="" />
+                        <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Tabulaire data</figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <br>
+              </li>
+              <li class="bullet-list__item">Importeer de tabulaire data in Open Refine.</li>
+              <li class="bullet-list__item">Map de kolommen van de tabulaire data naar de klassen en eigenschappen van het model. Dit kan via de “Edit RDF Skeleton” optie. Een venster getiteld “RDF Schema Alignment” opent waarin manueel kan bepaald worden op welke eigenschap elke kolom moet gemapt worden. In onderstaand voorbeeld wordt de kolom met de boektitels gemapt op dct:title en de beschrijving op dct:description ter illustratie.
+                <div class="lightbox js-lightbox gallery">
+                    <a data-lightbox-item class="gallery__item" href="img/openrefine_map.png" data-size="834x293" itemprop="contentUrl">
+                      <figure>
+                          <img itemprop="thumbnail" src="img/openrefine_map.png" srcset="img/openrefine_map.png 1x, img/openrefine_map.png 2x" alt="" />
+                          <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Mapping naar het datamodel</figcaption>
+                      </figure>
+                    </a>
+                </div>
+                <br>
+              </li>
+              <li class="bullet-list__item">Eenmaal de mapping volledig gebeurd is en alle instellingen gespecificeerd zijn, kan de data geëxporteerd worden als RDF. Dit kan via “Export” > “RDF as RDF/XML”. Onderstaande afbeelding toont het resultaat voor het fictief voorbeeld.
+                <div class="lightbox js-lightbox gallery">
+                    <a data-lightbox-item class="gallery__item" href="img/openrefine_rdf.png" data-size="1062x307" itemprop="contentUrl">
+                      <figure>
+                          <img itemprop="thumbnail" src="img/openrefine_rdf.png" srcset="img/openrefine_rdf.png 1x, img/openrefine_rdf.png 2x" alt="" />
+                          <figcaption class="js-lightbox-caption lightbox-caption" itemprop="caption description">Mapping naar het datamodel</figcaption>
+                      </figure>
+                    </a>
+                </div>
+                <br>
+              </li>
+            </ul>
+            </div>
 
 
 
@@ -540,26 +593,42 @@ EasyRDF Library voor RDF manipulatie (met ondersteuning voor JSON-LD)
                   <div class="side-navigation__group">
                     <ul>
                       <li class="side-navigation__item">
-                        <a class="side-navigation__toggle" href="#subcategorie" data-child="parent-1">CASE 1: eerste case</a>
+                        <a href="#case1" data-child="parent-2">Case 1: Een API opzetten</a>
+                      </li>
+                      <li class="side-navigation__item">
+                        <a href="#case2" data-child="parent-2">Case 2: Een database opzetten</a>
+                      </li>
+                      <li class="side-navigation__item">
+                        <a class="side-navigation__toggle" href="#case3" data-child="parent-1">Case 3: Gegevensuitwisseling</a>
                         <ul>
                           <li class="side-navigation__item">
-                            <a href="#subcategorie-sub1" data-parent="parent-1">Stap 1</a>
+                            <a href="#case3_sub1" data-parent="parent-1">Gebruik van @context definities</a>
                           </li>
                           <li class="side-navigation__item">
-                            <a href="#subcategorie-sub2" data-parent="parent-1">Stap 2</a>
+                            <a href="#case3_sub2" data-parent="parent-1">Omgaan met identificatoren</a>
+                          </li>
+                          <li class="side-navigation__item">
+                            <a href="#case3_sub3" data-parent="parent-1">Nesting en arrays</a>
+                          </li>
+                          <li class="side-navigation__item">
+                            <a href="#case3_sub4" data-parent="parent-1">Definiëren van codelijsten, taxonomieën en thesauri</a>
+                          </li>
+                          <li class="side-navigation__item">
+                            <a href="#case3_sub5" data-parent="parent-1">Containers en paginering</a>
+                          </li>
+                          <li class="side-navigation__item">
+                            <a href="#case3_sub6" data-parent="parent-1">Input of outputstructuur vastleggen</a>
+                          </li>
+                          <li class="side-navigation__item">
+                            <a href="#case3_sub7" data-parent="parent-1">Beschikbare tools en libraries</a>
+                          </li>
+                          <li class="side-navigation__item">
+                            <a href="#case3_sub8" data-parent="parent-1">Andere serialisaties</a>
                           </li>
                         </ul>
                       </li>
                       <li class="side-navigation__item">
-                        <a class="side-navigation__toggle" href="#subcategorie2" data-child="parent-2">CASE 2: tweede case</a>
-                        <ul>
-                          <li class="side-navigation__item">
-                            <a href="#subcategorie2-sub1" data-parent="parent-2">Stap 1</a>
-                          </li>
-                          <li class="side-navigation__item">
-                            <a href="#subcategorie2-sub2" data-parent="parent-2">Stap 2</a>
-                          </li>
-                        </ul>
+                        <a href="#case4" data-child="parent-2">Case 4: Van tabulaire naar linked data</a>
                       </li>
                     </ul>
                   </div>
@@ -582,44 +651,45 @@ EasyRDF Library voor RDF manipulatie (met ondersteuning voor JSON-LD)
         </div>
       </div>
 
-    <div class="region region--alt">
-      <div class="layout layout--wide">
+      <div class="region region--alt">
+        <div class="layout layout--wide">
 
-        <div class="u-spacer--large">
-          <h2 class="h2 u-named-anchor" id="handleidingen">Profielgebaseerde handleidingen</h2>
+          <div class="u-spacer--large">
+            <h2 class="h2 u-named-anchor" id="handleidingen">Profielgebaseerde handleidingen</h2>
 
-          <!-- demo doormat component in grid -->
-          <ul class="grid grid--is-stacked js-equal-height-container">
-            <li class="col--4-12 col--6-12--m col--12-12--xs">
-              <a class="doormat js-equal-height" href="businessverantwoordelijke.html">
-                <h2 class="doormat__title" data-clamp="2">Business verantwoordelijke</h2>
-                <div class="doormat__text" data-clamp="3">Specifieke handleiding voor business verantwoordelijken.
-                </div>
-              </a>
-            </li>
-            <li class="col--4-12 col--6-12--m col--12-12--xs">
-              <a class="doormat  js-equal-height" href="analist.html">
-                <h2 class="doormat__title" data-clamp="2">Analist</h2>
-                <div class="doormat__text">Specifieke handleiding voor technische en funcionele analisten.
-                </div>
-              </a>
-            </li>
-                <li class="col--4-12 col--6-12--m col--12-12--xs">
-              <a class="doormat  js-equal-height" href="ontwikkelaar.html">
-                <h2 class="doormat__title" data-clamp="2">Ontwikkelaar</h2>
-                <div class="doormat__text" data-clamp="3">Specifieke handleiding voor ontwikkelaars.
-                </div>
-              </a>
-            </li>
-          </ul>
-          <!-- end component -->
+            <!-- demo doormat component in grid -->
+            <ul class="grid grid--is-stacked js-equal-height-container">
+              <li class="col--4-12 col--6-12--m col--12-12--xs">
+                <a class="doormat js-equal-height" href="businessverantwoordelijke.html">
+                  <h2 class="doormat__title" data-clamp="2">Business verantwoordelijke</h2>
+                  <div class="doormat__text" data-clamp="3">Integreren van de informatiestrategie in een projectplan.
+                  </div>
+                </a>
+              </li>
+              <li class="col--4-12 col--6-12--m col--12-12--xs">
+                <a class="doormat  js-equal-height" href="analist.html">
+                  <h2 class="doormat__title" data-clamp="2">Analist</h2>
+                  <div class="doormat__text">Uitwerken van een informatiemodel op basis van de behoeften.
+                  </div>
+                </a>
+              </li>
+                  <li class="col--4-12 col--6-12--m col--12-12--xs">
+                <a class="doormat  js-equal-height" href="ontwikkelaar.html">
+                  <h2 class="doormat__title" data-clamp="2">Ontwikkelaar</h2>
+                  <div class="doormat__text" data-clamp="3">Implementeren van semantische afspraken in elektronische diensten.
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- end component -->
+
+          </div>
+
 
         </div>
-
       </div>
-    </div>
 
-    <div class="region">
+    <!-- <div class="region">
       <div class="layout layout--wide">
         <div class="grid" data-tabs data-tabs-responsive-label="Navigatie" data-active="tab-2-nummer-1">
           <div class="col--1-1">
@@ -653,7 +723,7 @@ EasyRDF Library voor RDF manipulatie (met ondersteuning voor JSON-LD)
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
