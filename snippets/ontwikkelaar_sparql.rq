@@ -1,4 +1,4 @@
-PREFIX persoon:  <http://data.vlaanderen.be/ns/persoon#Gezin>
+PREFIX persoon:  <http://data.vlaanderen.be/ns/persoon#>
 SELECT ?voornaam ?achternaam
 WHERE {
   <http://data.vlaanderen.be/id/persoon/1234> persoon:isLidVan ?gezin .
