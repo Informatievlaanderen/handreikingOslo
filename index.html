@@ -32,33 +32,39 @@
       </div>
     </div>
 
-    <header class="content-header " role="banner">
+    <div style="min-height:44px;;" id="vlaanderen-header">
+      <!-- insert your global header here -->
+      <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/5ecf33a0a922428cb9d944c55362ed15"></script>
+      <!-- end global header-->
+    </div>
+
+    <header class="content-header content-header--small content-header--has-context u-spacer--large">
       <div class="content-header__wrapper">
-        <picture>
-          <!--[if IE 9]>
-        <video style="display: none;"><![endif]-->
-          <source srcset="https://www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1x" media="(min-width: 1024px)">
-            <source srcset="https://www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 1x" media="(max-device-width: 767px)">
-              <source srcset="https://www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1x" media="(max-width: 1023px)">
-                <!--[if IE 9]></video><![endif]-->
-                <!--[if lt IE 9]>
-        <img itemprop="image" src=//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg" alt="" title=""/><![endif]-->
-                <!--[if !lt IE 9]><!-->
-                <img src="https://www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg" srcset="https://www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 320w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1024w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1600w"
-                alt="" title="">
-                <!-- <![endif]-->
+        <picture class="content-header__bg">
+          <img sizes="100vw" src="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg"
+               srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 320w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1024w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1600w"
+               alt="" title="">
         </picture>
         <div class="layout layout--wide">
           <div class="content-header__content">
-            <h1 class="content-header__title" itemprop="name">
-            <span class="content-header__title__content">Opleidingsmateriaal OSLO</span>
-          </h1>
+            <div class="content-header__logo-wrapper">
+              <a href="#" class="content-header__entity-logo content-header__entity-logo--small">
+                <span class="content-header__entity-logo__title">Informatie Vlaanderen</span>
+              </a>
+            </div>
+            <div class="content-header__context content-header__context--has-link">
+              <a class="content-header__context__link" href="">OSLO</a>
+            </div>
+            <div class="content-header__title content-header__title--has-link" itemprop="name">
+              <a class="content-header__title__link" href="">Opleidingsmateriaal</a>
+            </div>
           </div>
         </div>
       </div>
     </header>
+
     <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
-      <div class="region">
+      <div>
         <div class="layout layout--wide">
           <div class="grid">
             <div class="col--8-12 col--12-12--s col--8-12--m">
@@ -333,7 +339,7 @@
                   </div> -->
                 </div>
               </nav>
-            </div> -->
+            </div>
             <!-- end menu -->
 
 
@@ -344,6 +350,14 @@
 
   </div>
   <!-- End page content -->
+
+  <div id="vlaanderen-footer">
+    <!-- insert your Vlaanderen-footer-code here -->
+    <script src="//widgets.vlaanderen.be/widget/live/d6d44414e7c242f396ab6da8f8da5198" type=
+            "text/javascript">
+            <![CDATA[]]>
+    </script> <!-- End global footer-->
+  </div>
 
 
   <script src="https://dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
