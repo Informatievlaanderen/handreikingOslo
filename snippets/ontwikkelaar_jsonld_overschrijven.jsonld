@@ -12,7 +12,7 @@
   "heeftGeboorte": {
     "@context": {
   	"plaats": {
-  	  "@id": "http://data.vlaanderen.be/ns/persoon#plaats",
+  	  "@id": "http://data.vlaanderen.be/standaarden/?category=https://data.vlaanderen.be/id/concept/StandaardType/Vocabulariumpersoon#plaats",
   	  "@type": "http://www.w3.org/ns/locn#Address"
   	}
     },
