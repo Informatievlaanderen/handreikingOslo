@@ -1,17 +1,18 @@
 {
   "@context": [
-  	"http://data.vlaanderen.be/context/persoon.jsonld",
-  	"http://data.vlaanderen.be/context/generiek.jsonld"
+    "http://data.vlaanderen.be/context/persoon.jsonld",
+    "http://data.vlaanderen.be/context/generiek.jsonld"
   ],
   "@id": "https://data.vlaanderen.be/id/persoon/1234",
-  "@type": [ "GeregistreerdPersoon", "Inwoner" ],
+  "@type": [
+    "GeregistreerdPersoon",
+    "Inwoner"
+  ],
   "heeftVerblijfplaats": [
     {
       "@id": "_:758734",
       "@type": "Verblijfplaats",
-      "verblijfsadres": {
-        …
-      }
+      "verblijfsadres": {}
     }
   ]
 }

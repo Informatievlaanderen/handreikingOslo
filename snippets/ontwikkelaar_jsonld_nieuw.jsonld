@@ -1,14 +1,20 @@
 {
-  "@context":
-  [
+  "@context": [
     "http://data.vlaanderen.be/context/persoon.jsonld",
     {
-    	"img" { "@id": "http://xmlns.com/foaf/0.1/img", "@type": "@id" }
+      "img": {
+        "@id": "http://xmlns.com/foaf/0.1/img",
+        "@type": "@id"
+      }
     }
   ],
   "@id": "http://data.vlaanderen.be/id/persoon/1234",
   "@type": "Persoon",
-  "voornaam": [ "Jan" ],
-  "achternaam": [ "Janssens" ],
-  "img": "http://example.org/profielfoto-jan-janssens.jpeg",
+  "voornaam": [
+    "Jan"
+  ],
+  "achternaam": [
+    "Janssens"
+  ],
+  "img": "http://example.org/profielfoto-jan-janssens.jpeg"
 }

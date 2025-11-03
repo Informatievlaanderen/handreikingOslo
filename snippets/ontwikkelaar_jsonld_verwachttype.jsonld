@@ -1,8 +1,9 @@
 {
   "@context": {
-    …
-    "img" { "@id": "http://xmlns.com/foaf/0.1/img", "@type": "@id" }
+    "img": {
+      "@id": "http://xmlns.com/foaf/0.1/img",
+      "@type": "@id"
+    }
   },
-  …
-  "img": "http://example.org/profielfoto-jan-janssens.jpeg",
+  "img": "http://example.org/profielfoto-jan-janssens.jpeg"
 }

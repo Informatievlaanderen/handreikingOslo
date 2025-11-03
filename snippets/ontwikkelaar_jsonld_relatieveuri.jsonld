@@ -1,4 +1,6 @@
-“@context”: {
-  “@base”: “http://data.vlaanderen.be/id/”
+{
+  "@context": {
+    "@base": "http://data.vlaanderen.be/id/"
+  },
+  "@id": "persoon/1234"
 }
-"@id": "persoon/1234"

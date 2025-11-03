@@ -1,8 +1,12 @@
-"@context": "http://data.vlaanderen.be/context/melding.jsonld",
-"@type": "Melding",
-"heeftParticiperende": [
-  {
-    "@type”: “Agent”,
-    "rol": {"@default": "Indiener"}
-  }
-]
+{
+  "@context": "http://data.vlaanderen.be/context/melding.jsonld",
+  "@type": "Melding",
+  "heeftParticiperende": [
+    {
+      "@type": "Agent",
+      "rol": {
+        "@default": "Indiener"
+      }
+    }
+  ]
+}

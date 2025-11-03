@@ -1,7 +1,7 @@
 {
   "@context": {
-    "skos":    "http://www.w3.org/2004/02/skos/core#",
-    "rdfs":    "http://www.w3.org/2000/01/rdf-schema#"
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   },
   "@graph": [
     {
@@ -12,9 +12,9 @@
         "@value": "Type Notificatie"
       },
       "skos:hasTopConcept": [
-          "http://data.vlaanderen.be/id/concept/notificatietype/InformatiefBericht",
-          "http://data.vlaanderen.be/id/concept/notificatietype/DossiergerelateerdBericht",
-          "http://data.vlaanderen.be/id/concept/notificatietype/ProbleemMelden"
+        "http://data.vlaanderen.be/id/concept/notificatietype/InformatiefBericht",
+        "http://data.vlaanderen.be/id/concept/notificatietype/DossiergerelateerdBericht",
+        "http://data.vlaanderen.be/id/concept/notificatietype/ProbleemMelden"
       ]
     },
     {

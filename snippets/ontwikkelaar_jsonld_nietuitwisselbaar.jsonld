@@ -1,9 +1,10 @@
-{
-  “voorkeursNaam": “Agentschap Informatie Vlaanderen",
-  “alternatieveNaam": “AIV",
-}
-
-{
-  “naam": “Agentschap Informatie Vlaanderen",
-  “afkorting": “AIV",
-}
+[
+  {
+    "voorkeursNaam": "Agentschap Informatie Vlaanderen",
+    "alternatieveNaam": "AIV"
+  },
+  {
+    "naam": "Agentschap Informatie Vlaanderen",
+    "afkorting": "AIV"
+  }
+]
